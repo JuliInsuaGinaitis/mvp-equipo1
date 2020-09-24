@@ -15,13 +15,6 @@ La versión 1.0 busca encontrar el balance entre funcionalidad, y un diseño est
 - http://www.promusica.com.ar 
 
 
-
-
-
-![1_Diseño Home](C:\Users\DELL\Downloads\wetransfer-9ebf11\1_Diseño Home.jpg)
-
-
-
 ###### Participantes:
 
 - [x] Luis Argüelles 
