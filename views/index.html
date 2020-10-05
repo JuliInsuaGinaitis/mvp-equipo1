@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles/index.css" type="text/css" rel="stylesheet" />
+    <title>Jamming Store</title>
+    <script src="https://kit.fontawesome.com/29e46bb5b8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+    <img src="img/f-logo/logo-j-blanco.png" class="logo"/>
+      <nav>
+        <ul class="topNav">
+          <li><a href="/home">Home</a></li>
+          <hr class="navSeparator">
+          <li><a href="/products">Productos</a></li>
+        </hr>
+          <hr class="navSeparator">
+          <li><a href="/register">Registrarse</a></li>
+      </hr>
+          <hr class="navSeparator">
+          <li><a href="/userProfile">Mi Cuenta</a></li>
+          </hr>
+          <li><a href="/contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <input type="text" />
+      </div>
+      <a href="*"><i class="fas fa-shopping-bag iconHeader"></i></a>
+    </header>
+    <!--Contenedor del slideshow-->
+    <div class="slideshow-container">
+      <!--Imágenes-->
+      <div class="mySlides fade">
+        <img src="img/f-home/fondo-home-1.jpg" style="width: 100%" />
+        <div class="text">INSTRUMENTOS MUSICALES</br>Y AUDIO PROFESIONAL.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertextslides">2 / 3</div>
+        <img src="img/f-home/fondo-home-2.jpg" style="width: 100%" />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertextslides">3 / 3</div>
+        <img src="img/f-home/fondo-home-3.jpg" style="width: 100%" />
+        <div class="text">Caption Three</div>
+      </div>
+
+      <!-- Botones para avanzar-->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- Los puntitos de por cuál va -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <section class="destacados">
+      <article class="destacado"></article>
+    </section>
+    <section class="categorias">
+      <article></article>
+    </section>
+    <footer></footer>
+  </body>
+</html>

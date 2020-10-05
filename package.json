@@ -1,0 +1,23 @@
+{
+  "name": "jamming-store",
+  "version": "1.0.0",
+  "description": "Jamming Store (Digital House)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliInsuaGinaitis/mvp-equipo1.git"
+  },
+  "author": "Luis Argüelles, Julieta Insúa Ginaitis, Tute Hernández, Pablo Mombiela.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliInsuaGinaitis/mvp-equipo1/issues"
+  },
+  "homepage": "https://github.com/JuliInsuaGinaitis/mvp-equipo1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
