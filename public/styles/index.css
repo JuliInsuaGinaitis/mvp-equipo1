@@ -336,3 +336,143 @@ footer {
   align-self: center;
 }
 /*Fin del footer */
+
+.navegador {
+  background-color: #16203d;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: space-around;
+  margin: 0% 15%;
+}
+
+/*Estilos ProductDetail By Juli*/
+
+.galeria-producto{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: space-around;
+  width: 10%;
+  float: left;
+  text-align: center;
+}
+
+.item-description {
+  box-sizing: content-box;
+  width: 35%;
+  padding: 5px;
+  position: relative;
+  height: 600px;
+
+}
+.precio-final{
+  color: red;
+  font-size: x-large;
+  font-weight: 200 ;
+
+}
+.product-detail{
+  display: flex;
+ flex-direction: row;
+ padding-left: 50px;
+}
+
+.agregar-al-carrito{
+  color:#10325e
+  
+}
+.payment-methods {
+  margin-top: 100px;
+  box-sizing: content-box;
+  width: 24%;
+  height: 500px;
+  border: solid white 2px;
+  border-radius: 35px;
+  position: relative;
+  vertical-align: bottom;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 2);
+  text-align: center;
+  align-items: end;
+  border-radius: 35px;
+}
+.recomendados{
+  text-align: center;
+  color: rgb(175, 170, 170);
+}
+
+.division{
+  color: lightgrey;
+  align-items: center;
+  width: 90%;
+}
+
+#green-check{
+  color: green;
+  float:left;
+  width: 25px;
+  padding: 10px 10px 10px 10px;
+  height: 25px;
+}
+
+.div-payment-methods{
+  background: linear-gradient(-45deg, #FFFFFD 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #10325e;
+  background-size: 10px 16px;
+  content: " ";
+  display: block;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  color: white;
+  padding-top: 35px;
+  font-size: 20px;
+  border-radius: 31px 31px 0% 0%;
+
+}
+.quick_desc{
+  color:grey;
+}
+.img-payment-methods{
+  position: center;
+}
+.payment-conditions1{
+  padding: 10px 10px 10px 10px;
+  margin: 15px ;
+  background-color: rgb(233, 233, 233);
+  text-align: left;
+  font-size: 15px;
+}
+.payment-conditions2{
+  padding-left: 50px;
+  text-align: left;
+  font-size: 15px;
+}
+.calcular{
+  border-radius:  0 20px 20px 0 ;
+  border: 2px solid grey;
+  width: 100px;
+  height: 50px;
+  color:grey
+  background-color: white;
+  float:center;
+}
+.no-se-cp{
+  font-size: 12px;
+  text-align: left;
+  color:grey;
+  margin-left: 20px;
+}
+.cp{
+  border-radius:   20px 0 0 20px  ;
+  width: 200px;
+  height: 50px;
+  float:center;
+}
+/*Fin Estilos ProductDetail By Juli*/
