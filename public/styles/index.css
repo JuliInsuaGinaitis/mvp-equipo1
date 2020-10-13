@@ -237,6 +237,7 @@ a:active {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
+  margin-top: 50px;
 }
 
 .destacadosGuide {
@@ -670,7 +671,7 @@ footer:not(.f-login-register) {
 }
 /*Estilos ProductDetail By Juli*/
 
-.navegador {
+/*.navegador {
   background-color: #16203d;
 }
 
@@ -680,7 +681,7 @@ footer:not(.f-login-register) {
   text-align: right;
   justify-content: space-around;
   margin: 0% 15%;
-}
+}*/
 
 .galeria-producto {
   display: flex;
@@ -736,6 +737,8 @@ footer:not(.f-login-register) {
   color: lightgrey;
   align-items: center;
   width: 90%;
+  margin-top: 50px;
+  margin-left: 5%;
 }
 
 #green-check {
@@ -941,3 +944,9 @@ footer:not(.f-login-register) {
 button {outline-color: lightgray;}
 
 /* FIN CSS tute */
+
+/* css By Juli*/
+.footer-pd{
+margin-top: 50px;
+}
+/* Fin Footer ProductDetail By Juli*/
