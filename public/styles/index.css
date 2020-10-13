@@ -5,7 +5,6 @@
   padding: 0;
 }
 
-
 /*Header stlyes */
 
 header {
@@ -73,20 +72,17 @@ a:link:not(.recover-password) {
   color: white;
 }
 
-
 /* visited link */
 
 a:visited {
   color: white;
 }
 
-
 /* mouse over link */
 
 a:hover:not(.recover-password) {
   color: white;
 }
-
 
 /* selected link */
 
@@ -100,9 +96,7 @@ a:active {
   border-color: white;
 }
 
-
 /* Acá termina el header */
-
 
 /* Slideshow de index */
 
@@ -212,25 +206,23 @@ a:active {
 
 @-webkit-keyframes fade {
   from {
-      opacity: 0.4;
+    opacity: 0.4;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   from {
-      opacity: 0.4;
+    opacity: 0.4;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
-
 /*Fin del carousel Home */
-
 
 /* Destacados Home*/
 
@@ -301,9 +293,7 @@ a:active {
   color: black;
 }
 
-
 /* Fin de destacados Home*/
-
 
 /* Categorías Home */
 
@@ -345,9 +335,7 @@ a:active {
   text-align: center;
 }
 
-
 /* Fin de categorías Home */
-
 
 /* Footer */
 
@@ -391,9 +379,7 @@ footer:not(.f-login-register) {
   align-self: center;
 }
 
-
 /*Fin del footer */
-
 
 /* Register*/
 
@@ -471,31 +457,29 @@ footer:not(.f-login-register) {
 
 @media (max-width: 425px) {
   .card-left-register {
-      width: 100%;
-      height: auto;
-      background-color: white;
-      padding-left: 4%;
-      padding-top: 2%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-left: 4%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   .card-right-register {
-      display: none;
+    display: none;
   }
   .button-createuser {
-      width: 38%;
-      height: 30px;
-      background-color: #e30613;
-      font-size: 8px;
-      color: white;
-      border: none;
+    width: 38%;
+    height: 30px;
+    background-color: #e30613;
+    font-size: 8px;
+    color: white;
+    border: none;
   }
 }
 
-
 /*Fin del Register*/
-
 
 /* Login*/
 
@@ -615,36 +599,34 @@ footer:not(.f-login-register) {
 
 @media (max-width: 425px) {
   .card-left-login {
-      width: 100%;
-      height: auto;
-      background-color: white;
-      padding-left: 4%;
-      padding-top: 2%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-left: 4%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   .card-right-login {
-      display: none;
+    display: none;
   }
   .check-recover {
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
   }
   .recover-password {
-      font-size: 12px;
-      color: black;
-      margin-left: 0px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 5px;
+    font-size: 12px;
+    color: black;
+    margin-left: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
   }
 }
 
-
 /*Fin Login */
-
 
 /*footer login y register, en este caso es la misma estructura para los 2*/
 
@@ -700,8 +682,7 @@ footer:not(.f-login-register) {
   margin: 0% 15%;
 }
 
-
-.galeria-producto{
+.galeria-producto {
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -717,23 +698,20 @@ footer:not(.f-login-register) {
   padding: 5px;
   position: relative;
   height: 600px;
-
 }
-.precio-final{
+.precio-final {
   color: red;
   font-size: x-large;
-  font-weight: 200 ;
-
+  font-weight: 200;
 }
-.product-detail{
+.product-detail {
   display: flex;
- flex-direction: row;
- padding-left: 50px;
+  flex-direction: row;
+  padding-left: 50px;
 }
 
-.agregar-al-carrito{
-  color:#10325e
-  
+.agregar-al-carrito {
+  color: #10325e;
 }
 .payment-methods {
   margin-top: 100px;
@@ -749,27 +727,27 @@ footer:not(.f-login-register) {
   align-items: end;
   border-radius: 35px;
 }
-.recomendados{
+.recomendados {
   text-align: center;
   color: rgb(175, 170, 170);
 }
 
-.division{
+.division {
   color: lightgrey;
   align-items: center;
   width: 90%;
 }
 
-#green-check{
+#green-check {
   color: green;
-  float:left;
+  float: left;
   width: 25px;
   padding: 10px 10px 10px 10px;
   height: 25px;
 }
 
-.div-payment-methods{
-  background: linear-gradient(-45deg, #FFFFFD 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
+.div-payment-methods {
+  background: linear-gradient(-45deg, #fffffd 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
   background-position: bottom;
   background-repeat: repeat-x;
   background-color: #10325e;
@@ -784,66 +762,90 @@ footer:not(.f-login-register) {
   padding-top: 35px;
   font-size: 20px;
   border-radius: 31px 31px 0% 0%;
-
 }
-.quick_desc{
-  color:grey;
+.quick_desc {
+  color: grey;
 }
-.img-payment-methods{
+.img-payment-methods {
   position: center;
 }
-.payment-conditions1{
+.payment-conditions1 {
   padding: 10px 10px 10px 10px;
-  margin: 15px ;
+  margin: 15px;
   background-color: rgb(233, 233, 233);
   text-align: left;
   font-size: 15px;
 }
-.payment-conditions2{
+.payment-conditions2 {
   padding-left: 50px;
   text-align: left;
   font-size: 15px;
 }
-.calcular{
-  border-radius:  0 20px 20px 0 ;
+.calcular {
+  border-radius: 0 20px 20px 0;
   border: 2px solid grey;
   width: 100px;
   height: 50px;
-  color:grey
+  color: grey;
   background-color: white;
-  float:center;
+  float: center;
 }
-.no-se-cp{
+.no-se-cp {
   font-size: 12px;
   text-align: left;
-  color:grey;
+  color: grey;
   margin-left: 20px;
 }
-.cp{
-  border-radius:   20px 0 0 20px  ;
+.cp {
+  border-radius: 20px 0 0 20px;
   width: 200px;
   height: 50px;
-  float:center;
+  float: center;
 }
 /*Fin Estilos ProductDetail By Juli*/
 
 /* CSS TUTE (productCART) */
 
-.d-flex{display: flex;}
-.f-direction-r {flex-direction: row;}
-.f-direction-c {flex-direction: column;}
-.align-items {align-items: flex-start;}
-.align-items-end {align-items: flex-end;}
-.j-content {justify-content: space-around;}
-.m-left{margin-left: 40px;}
-.m-right{margin-right: 20px;}
-.m-top{margin-top: 6px;}
-.button-red {background-color: red; color: white;}
-.float-r {float:right;}
-.m-total {margin: 10px;}
+.d-flex {
+  display: flex;
+}
+.f-direction-r {
+  flex-direction: row;
+}
+.f-direction-c {
+  flex-direction: column;
+}
+.align-items {
+  align-items: flex-start;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.j-content {
+  justify-content: space-around;
+}
+.m-left {
+  margin-left: 40px;
+}
+.m-right {
+  margin-right: 20px;
+}
+.m-top {
+  margin-top: 6px;
+}
+.button-red {
+  background-color: red;
+  color: white;
+}
+.float-r {
+  float: right;
+}
+.m-total {
+  margin: 10px;
+}
 
 .navegador {
-  background-color:#16203d;
+  background-color: #16203d;
   height: 35px;
 }
 
@@ -851,10 +853,12 @@ footer:not(.f-login-register) {
   justify-content: flex-start;
   list-style: none;
   color: white;
-  padding: 8px 0px; 
+  padding: 8px 0px;
 }
 
-.fa-chevron-down {padding: 0px 8px;}
+.fa-chevron-down {
+  padding: 0px 8px;
+}
 
 .section-title {
   font-size: 12px;
@@ -862,14 +866,14 @@ footer:not(.f-login-register) {
   color: gray;
 }
 
-.cart-description{
+.cart-description {
   border: 2px solid lightgray;
   flex-grow: 1;
   margin-right: 8%;
 }
 
 .description-title {
-  background-color: #E5E7E9;
+  background-color: #e5e7e9;
   list-style: none;
   height: 30px;
 }
@@ -891,24 +895,29 @@ footer:not(.f-login-register) {
 
 .total-cart {
   font-size: 14px;
-  background-color: #E5E7E9;
+  background-color: #e5e7e9;
   margin-right: 50px;
-  }
+}
 
-.subtotal {padding: 0px 20px;}
+.subtotal {
+  padding: 0px 20px;
+}
 
-.text-end {text-align:end;
+.text-end {
+  text-align: end;
   color: red;
 }
 
 .finalizar {
-  height: 50px;;
+  height: 50px;
   font-size: 16px;
   border: none;
   font-weight: 600;
 }
 
-.divider {border-bottom: 1px solid gray;}
+.divider {
+  border-bottom: 1px solid gray;
+}
 
 .cupon {
   width: 80%;
@@ -916,10 +925,10 @@ footer:not(.f-login-register) {
   font-weight: 600;
 }
 
-.completar{
+.completar {
   width: 200px;
   height: 30px;
-  background-color:grey;
+  background-color: grey;
 }
 
 .aplicar {
@@ -941,6 +950,8 @@ footer:not(.f-login-register) {
   border-radius: 50%;
 }
 
-button {outline-color: lightgray;}
+button {
+  outline-color: lightgray;
+}
 
 /* FIN CSS tute */
