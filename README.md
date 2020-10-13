@@ -21,3 +21,5 @@ La versión 1.0 busca encontrar el balance entre funcionalidad, y un diseño est
 - [x] "Tute" Hernandez
 - [x] Pablo Mombiela
 - [x] Julieta Insua Ginaitis
+
+######Tablero: https://app.asana.com/0/1193082235852073/board
