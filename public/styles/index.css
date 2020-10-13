@@ -826,3 +826,121 @@ footer:not(.f-login-register) {
   float:center;
 }
 /*Fin Estilos ProductDetail By Juli*/
+
+/* CSS TUTE (productCART) */
+
+.d-flex{display: flex;}
+.f-direction-r {flex-direction: row;}
+.f-direction-c {flex-direction: column;}
+.align-items {align-items: flex-start;}
+.align-items-end {align-items: flex-end;}
+.j-content {justify-content: space-around;}
+.m-left{margin-left: 40px;}
+.m-right{margin-right: 20px;}
+.m-top{margin-top: 6px;}
+.button-red {background-color: red; color: white;}
+.float-r {float:right;}
+.m-total {margin: 10px;}
+
+.navegador {
+  background-color:#16203d;
+  height: 35px;
+}
+
+.links {
+  justify-content: flex-start;
+  list-style: none;
+  color: white;
+  padding: 8px 0px; 
+}
+
+.fa-chevron-down {padding: 0px 8px;}
+
+.section-title {
+  font-size: 12px;
+  margin: 20px 40px;
+  color: gray;
+}
+
+.cart-description{
+  border: 2px solid lightgray;
+  flex-grow: 1;
+  margin-right: 8%;
+}
+
+.description-title {
+  background-color: #E5E7E9;
+  list-style: none;
+  height: 30px;
+}
+
+.product-info {
+  font-size: 14px;
+  align-items: center;
+}
+
+.p-description {
+  align-items: center;
+}
+
+.quantity {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+
+.total-cart {
+  font-size: 14px;
+  background-color: #E5E7E9;
+  margin-right: 50px;
+  }
+
+.subtotal {padding: 0px 20px;}
+
+.text-end {text-align:end;
+  color: red;
+}
+
+.finalizar {
+  height: 50px;;
+  font-size: 16px;
+  border: none;
+  font-weight: 600;
+}
+
+.divider {border-bottom: 1px solid gray;}
+
+.cupon {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.completar{
+  width: 200px;
+  height: 30px;
+  background-color:grey;
+}
+
+.aplicar {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+}
+
+.medios-pago {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.radio-b {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+button {outline-color: lightgray;}
+
+/* FIN CSS tute */
