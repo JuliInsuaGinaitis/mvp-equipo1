@@ -1,0 +1,29 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliInsuaGinaitis/mvp-equipo1.git"
+  },
+  "author": "Luis Argüelles, Julieta Insúa Ginaitis, Tute Hernández, Pablo Mombiela.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliInsuaGinaitis/mvp-equipo1/issues"
+  },
+  "homepage": "https://github.com/JuliInsuaGinaitis/mvp-equipo1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
