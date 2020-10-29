@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<!--<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="utf-8" />
+    <link href='/stylesheets/style.css' rel='stylesheet' />
+    <title>Jamming Store</title>
+    <script src="https://kit.fontawesome.com/29e46bb5b8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>-->
+
+<body>
+    <%- include('./partials/header')%>
+        <!-- <header>
+        <img src="/images/f-logo/logo-j-blanco.png" class="logo" />
+        <nav class="topNav">
+            <ul class="headerShortcuts">
+                <li class="headerLi"><a href="/">Home</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="*">Productos</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/register">Registrarse</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/login">Mi Cuenta</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/contact">Contacto</a></li>
+            </ul>
+            </div>
+        </nav>
+        <div>
+            <input type="text" class="searchBar" placeholder="&#xF002;" style="font-family:Arial, FontAwesome" />
+        </div>
+        <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
+    </header>-->
+
+        <main id="main-login">
+
+            <div class="card-login">
+                <div class="card-left-login">
+                    <div class="card-logo">
+                        <img src="/images/f-logo/logo-j-color.png" alt="logo">
+                    </div>
+                    <div class="card-title-login">
+                        <h1>Bienvenido/a admin</h1>
+                    </div>
+
+                    <div class="card-parrafo-login">
+                        <p>Edita tus productos llenando estos campos:</p>
+                    </div>
+                    <form method="POST" action="/:id/actualizar?_method=PUT" class="card-form">
+                        <div class="all-inputs">
+
+
+                            <div class="form-field">
+                                <label for=""></label>
+                                <input type="text" name="nameProduct" placeholder="Nombre del Producto">
+                            </div>
+
+                            <div class="form-field">
+                                <label for=""></label>
+                                <input type="text" name="descriptionProduct" placeholder="Descripción">
+                            </div>
+                            <div class="form-field">
+                                <label for=""></label>
+                                <input type="file" name="imageProduct" placeholder="Imagen">
+                            </div>
+                            <div class="form-field">
+                                <label for=""></label>
+                                <input type="text" name="catProduct" placeholder="Categoría">
+                            </div>
+                            <div class="form-field">
+                                <label for=""></label>
+                                <input type="color" name="colorProduct" placeholder="Color">
+                            </div>
+                            <div class="form-field">
+                                <label for=""></label>
+                                <input type="number" name="priceProduct" placeholder="Precio">
+                            </div>
+                            <!--
+                        <div class="check-recover">
+                            <input class="checkbox" name="checkbox" type="checkbox">
+                            <label class="checkbox" for="">Recuerdame</label>
+                            <a class="recover-password" href="*"> Olvidé mi contraseña</a>
+                        </div>
+                        -->
+                            <div class="form-button">
+                                <input type="submit" class="button-login" value="Actualizar">
+                                <input type="reset" class="button-signup" value="Borar Campos">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="card-left-footer">
+                        <p>Log in with</p>
+                        <div class="links-network">
+                            <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
+                            <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--
+            <div class="card-right-login">
+                <img src="/images/foto REGISTRO.jpg" alt="foto guitarra">
+            </div>
+            -->
+            </div>
+
+        </main>
+        <%- include('./partials/footer')%>
+            <!-- <footer class="f-login-register">
+                <div>
+                    <p class="footerCategoryTitle">Productos</p>
+                    <div class="footerItemHolder">
+                        <p class="footerItem">Cuerdas</br>Pianos y Teclados</br>Vientos</p>
+                        <p class="footerItemEscaped">Baterías y Percusión</br>Sonido</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="footerCategoryTitle">Atención</p>
+                    <p class="footerItem">Condiciones y Formas de Pago</br>Contacto</p>
+                </div>
+                <div>
+                    <p class="footerCategoryTitle">Contactános</p>
+                    <div class="footerItemHolder"></div>
+                    <div class="footerIconText"><i class="fas fa-phone-alt"></i>
+                        <p class="footerItemEscaped">+54 11 15-698-652</p>
+                    </div>
+                    <div class="footerIconText"><i class="fas fa-envelope"></i>
+                        <p class="footerItemEscaped">jammingstore@gmail.com</p>
+                    </div>
+                </div>
+                </div>
+                <div class="footerLocation">
+                    <div class="footerIconText"><i class="fas fa-map-marker-alt"></i>
+                        <p class="footerItemEscaped">Depósito Loyola 145</br>CP 1414, Villa Crespo</p>
+                    </div>
+                </div>
+            </footer>-->
+</body>
+
+</html>
