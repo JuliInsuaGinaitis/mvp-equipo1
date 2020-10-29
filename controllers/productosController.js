@@ -1,28 +1,48 @@
 const controlador = {
-    listadoProductos:(req,res)=> {
-        res.render('products');
+    listadoProductos: (req, res) => {
+        res.render('productList');
     },
-    index:(req,res)=> {
+    index: (req, res) => {
         res.render('index');
     },
-    
-    cart:(req,res)=> {
+
+    cart: (req, res) => {
         res.render('productCart');
     },
 
-    detail:(req,res)=> {
+    detail: (req, res) => {
         res.render('productDetail');
     },
 
-    register:(req,res)=> {
+    register: (req, res) => {
         res.render('register');
     },
-    login:(req,res)=> {
+    login: (req, res) => {
         res.render('login');
     },
-    contact:(req,res)=> {
+    contact: (req, res) => {
         res.render('contact');
     },
+
+    // controladores formulario ADMIN //
+    createproducts: (req, res) => {
+
+        res.render('createProducts');
+    },
+    confirmcreate: (req, res) => {
+        console.log(req.body)
+        res.send('VA POR POST!!!!');
+    },
+    editproducts: (req, res) => {
+        res.render('editProducts');
+    },
+    confirmedit: (req, res) => {
+        console.log(req.body)
+        res.send('VA POR PUT!!!!');
+    }
+
+
+
 
 
 

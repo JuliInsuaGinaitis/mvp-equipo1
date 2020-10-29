@@ -1,47 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link href="stylesheets/style.css" type="text/css" rel="stylesheet" />
-    <title>Jamming Store</title>
-    <link rel="icon" type="image/png" href="images\f-logo\favicon.png">
-    <script src="https://kit.fontawesome.com/29e46bb5b8.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-  </head>
+  <%- include('./partials/head')%>
 
   <body>
-    <header>
-    <img src="images/f-logo/logo-j-blanco.png" class="logo"/>
-      <nav class="topNav">
-        <ul class="headerShortcuts">
-          <li class="headerLi"><a href="/">Home</a></li>
-          <span  class="separatorLines"></span>
-          <li class="headerLi"><a href="*">Productos</a></li>
-          <span  class="separatorLines"></span>
-          <li class="headerLi"><a href="/register">Registrarse</a></li>
-          <span  class="separatorLines"></span>
-          <li class="headerLi"><a href="/login">Mi Cuenta</a></li>
-          <span  class="separatorLines"></span>
-          <li class="headerLi"><a href="/contact">Contacto</a></li>
-        </ul>
-      </div>
-      </nav>
-      <div>
-        <input type="text" class="searchBar" placeholder="&#xF002;" style="font-family:Arial, FontAwesome"/>
-      </div>
-      <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
-    </header>
+    <%- include('./partials/header')%>
 
-    <div class= "navegador">
-        <ul class="links m-left d-flex f-direction-r">
-          <li><a href="#">Cuerdas</a><i class="fas fa-chevron-down"></i></li>
-          <li><a href="#">Pianos y Teclados</a><i class="fas fa-chevron-down"></i></li>
-          <li><a href="#">Vientos</a><i class="fas fa-chevron-down"></i></li>
-          <li><a href="#">Baterías y Percusión</a><i class="fas fa-chevron-down"></i></li>
-          <li><a href="#">Sonido</a><i class="fas fa-chevron-down"></i></li>
-        </ul>
-      </div> 
+    <%- include('./partials/nav')%>
       <div class="sidebarAlignment">
       <div class="sidebar">
         <div class="sidebarCategory">
@@ -88,14 +52,14 @@
           <p class="plNavItemText">Los más vendidos</p>
         </div>
         <div class="plNavItem">
-          <label class="plNavItemLabel" for="orderBy"><select class="plNavSelect" name="orderBy">
+          <label class="plNavItemLabel" for="orderBy">Ordenar por<select class="plNavSelect" name="orderBy">
             <option value="relevance">Relevancia</option>
             <option value="price">Precio</option>
             <option value="az">A-Z</option>
             <option value="new">Nuevo</option>
           </select></label>
         </div>
-        <div class="plNavItem">
+        <div class="plNavItemEscaped">
           <div class="pagination">
             <a href="#">&laquo;</a>
             <a href="#">1</a>
@@ -112,137 +76,115 @@
       
       <section class="products">
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
+          <a href="/productDetail"><img src="images/f-productList/strato-fender-1.png" class="productImg"></a>
           <p class="productBrand">FENDER</p>
           <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
           <p class="productPrecio">$21.337,53</p>
-          <div class="precioFinalDiv">
+          <div class="productPrecioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
           <p class="productprecioFinal">$384.072,58</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <a href="/productDetail"><img src="images/f-productList/danelectro-longhorn.png" class="productImg"></a>
+          <p class="productBrand">DANELECTRO</p>
+          <p class="productName">Guitarra Eléctrica Danelectro</br>Longhorn</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$28.666,66</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$516.000</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <a href="/productDetail"><img src="images/f-productList/gretsch-electromatic-g5420t.png" class="productImg"></a>
+          <p class="productBrand">GRETSCH</p>
+          <p class="productName">Guitarra Eléctrica Gretsch</br>Electromatic G5420T</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$37.223</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$670.014</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <a href="/productDetail"><img src="images/f-productList/jackson-js11-dinky-tremolo-rw.png" class="productImg"></a>
+          <p class="productBrand">JACKSON</p>
+          <p class="productName">Guitarra Eléctrica Jackson</br>JS11 Dinky Tremolo RW</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$1985,67</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$35.742</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
+          <a href="/productDetail"><img src="images/f-productList/american-fender-jazzmaster.png" class="productImg"></a>
           <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <p class="productName">Guitarra Eléctrica American</br>Jazzmaster</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$18.422,5</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$331.605</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <a href="/productDetail"><img src="images/f-productList/prs-se-paul.png" class="productImg"></a>
+          <p class="productBrand">PRS</p>
+          <p class="productName">Guitarra Eléctrica Paul Reed Smith SE</br>Paul's Amber</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$25.944,44</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$467.000</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <a href="/productDetail"><img src="images/f-productList/gretsch-g6120tb-de-duane-eddy.png" class="productImg"></a>
+          <p class="productBrand">GRETSCH</p>
+          <p class="productName">Guitarra Eléctrica Gretsch</br>G6120T-DE Duane Eddy</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$44.427,22</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$800.590</p>
           </div>
         </article>
         <article class="productCard">
-          <a href="/productDetail"><img src="images/f-home/destacado Home 1.jpg" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
+          <a href="/productDetail"><img src="images/f-productList/schecter-banshee-6-extreme.png" class="productImg"></a>
+          <p class="productBrand">SCHECTER</p>
+          <p class="productName">Guitarra Eléctrica Schecter</br>Banshee 6 Extreme Charcoal Burst</p>
           <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
+          <p class="productPrecio">$3.521,22</p>
           <div class="precioFinalDiv">
           <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
+          <p class="productprecioFinal">$63.382</p>
           </div>
         </article>
         </section>
-        <div class="publicitySection">
-          <div class="publictyBannerContainer">
-            <img class="publicityBanner" source="">
+        <div class="advertsSection">
+          <div class="advertBannerContainer">
+            <img class="advertBanner" src="images/f-productList/yamaha-banner.jpeg">
           </div>
-          <div class="publictyBannerContainer">
-            <img class="publicityBanner" source="">
+          <div class="advertBannerContainer">
+            <img class="advertBanner" src="images/f-productList/pearl-banner.jpeg">
           </div>
-          <div class="publictyBannerContainer">
-            <img class="publicityBanner" source="">
+          <div class="advertBannerContainer">
+            <img class="advertBanner" src="images/f-productList/pioneer-banner.jpeg">
           </div>
-          <div class="publictyBannerContainer">
-            <img class="publicityBanner" source="">
+          <div class="advertBannerContainer">
+            <img class="advertBanner" src="images/f-productList/gibson-banner.jpeg">
           </div>
         </div>
         <div class="partnerBrandsContainer">
-          <img class="parnerBrandsImg">
+          <img class="parnerBrandsImg" src="images/f-productList/partner-brands.jpeg">
         </div>
       <div class="networkBannerContainer">
-        <img class="networkBanner" source="">
+        <img class="networkBanner" src="images/f-productList/network-banner.jpeg">
       </div>
     </div>
   </div>
-      <footer>
-        <div>
-        <a href="productList.ejs"><p class="footerCategoryTitle">Productos</p></a>
-        <div class="footerItemHolder">
-        <p class="footerItem">Cuerdas</br>Pianos y Teclados</br>Vientos</p>
-        <p class="footerItemEscaped">Baterías y Percusión</br>Sonido</p>
-      </div>
-      </div>
-      <div>
-        <p class="footerCategoryTitle">Atención</p>
-        <p class="footerItem">Condiciones y Formas de Pago</br>Contacto</p>
-      </div>
-      <div>
-        <p class="footerCategoryTitle">Contactános</p>
-        <div class="footerItemHolder"></div>
-        <div class="footerIconText"><i class="fas fa-phone-alt"></i> <p class="footerItemEscaped">+54 11 15-698-652</p></div>
-        <div class="footerIconText"><i class="fas fa-envelope"></i> <p class="footerItemEscaped">jammingstore@gmail.com</p></div>
-      </div>
-    </div>
-      <div class="footerLocation">
-        <div class="footerIconText"><i class="fas fa-map-marker-alt"></i> <p class="footerItemEscaped">Depósito Loyola 145</br>CP 1414, Villa Crespo</p></div>
-      </div>
-    </footer>
+  <%- include('./partials/footer')%>
 </body>
