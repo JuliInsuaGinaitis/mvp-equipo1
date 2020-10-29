@@ -232,6 +232,7 @@ a:active {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .destacadosTitle {
@@ -343,7 +344,7 @@ a:active {
 
 footer:not(.f-login-register) {
   background-color: #1a192d;
-  margin-top: 150px;
+  /* margin-top: 150px;*/
   color: white;
   display: flex;
   flex-direction: row;
@@ -948,6 +949,6 @@ button {outline-color: lightgray;}
 
 /* css By Juli*/
 .footer-pd{
-margin-top: 50px;
+  margin-top: 50px;
 }
 /* Fin Footer ProductDetail By Juli*/
