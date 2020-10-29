@@ -17,6 +17,7 @@ header {
 .logo {
   width: 250px;
   padding: 10px;
+  margin-bottom: 5px;
 }
 
 .iconHeader {
@@ -37,7 +38,7 @@ header {
   margin-left: 20px;
   list-style-type: none;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
   border-right: 2px white;
 }
@@ -387,7 +388,7 @@ footer:not(.f-login-register) {
 #main-register {
   display: flex;
   justify-content: center;
-  background-image: url(/img/f-register/fondo\ REGISTRO.jpg);
+  background-image: url(/images/f-register/fondo\ REGISTRO.jpg);
   background-size: cover;
 }
 
@@ -487,7 +488,7 @@ footer:not(.f-login-register) {
 #main-login {
   display: flex;
   justify-content: center;
-  background-image: url(/img/f-login/fondo\ LOGIN.jpg);
+  background-image: url(/images/f-login/fondo\ LOGIN.jpg);
   background-size: cover;
 }
 

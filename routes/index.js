@@ -1,35 +1,18 @@
 var express = require('express');
 var router = express.Router();
+const controlador = require ('../controllers/productosController.js');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', controlador.index);
 
+router.get('/register', controlador.register );
 
-router.get('/register', function(req, res, next) {
-  res.render('register' );
-});
+router.get('/login', controlador.login);
 
-router.get('/login', function(req, res, next) {
-  res.render('login' );
-});
+router.get('/contact', controlador.contact);
 
-router.get('/contact', function(req, res, next) {
-  res.render('contact' );
-});
+router.get('/productCart', controlador.cart);
 
-router.get('/productCart', function(req, res, next) {
-  res.render('productCart' );
-});
-
-router.get('/home', function(req, res, next) {
-  res.render('index' );
-});
-
-router.get('/productDetail', function(req, res, next) {
-  res.render('productDetail' );
-});
+router.get('/productDetail', controlador.detail);
 
 router.get('/productList', function(req, res){
   res.render('productList');
