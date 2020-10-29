@@ -40,30 +40,7 @@ app.use(function(err, req, res, next) {
 
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", function (req, res) {
-  let file = path.resolve("views/index.html");
-  res.sendFile(file);
-});
 
-app.get("/login", function (req, res) {
-  let file = path.resolve("views/login.html");
-  res.sendFile(file);
-});
-
-app.get("/register", function (req, res) {
-  let file = path.resolve("views/register.html");
-  res.sendFile(file);
-});
-
-app.get("/productCart", function (req, res) {
-  let file = path.resolve("views/productCart.html");
-  res.sendFile(file);
-});
-
-app.get("/productDetail", function (req, res) {
-  let file = path.resolve("views/productDetail.html");
-  res.sendFile(file);
-});
 
 app.get("*", (req, res) => {
   if (req.url.endsWith(".css")) {
