@@ -31,4 +31,8 @@ router.get('/productDetail', function(req, res, next) {
   res.render('productDetail' );
 });
 
+router.get('/productList', function(req, res){
+  res.render('productList');
+});
+
 module.exports = router;
