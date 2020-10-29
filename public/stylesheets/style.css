@@ -514,11 +514,22 @@ footer:not(.f-login-register) {
 
 /* Login*/
 
+.mainCreate-Edit {
+    display: flex;
+    justify-content: center;
+    background-image: url(/images/f-login/fondo\ LOGIN.jpg);
+    background-size: cover;
+    height: 40em;
+}
+
 #main-login {
     display: flex;
     justify-content: center;
     background-image: url(/images/f-login/fondo\ LOGIN.jpg);
     background-size: cover;
+}
+
+#em40 {
     height: 40em;
 }
 
