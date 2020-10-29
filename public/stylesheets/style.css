@@ -387,7 +387,7 @@ footer:not(.f-login-register) {
 #main-register {
   display: flex;
   justify-content: center;
-  background-image: url(/img/f-register/fondo\ REGISTRO.jpg);
+  background-image: url(/images/f-register/fondo\ REGISTRO.jpg);
   background-size: cover;
 }
 
@@ -487,7 +487,7 @@ footer:not(.f-login-register) {
 #main-login {
   display: flex;
   justify-content: center;
-  background-image: url(/img/f-login/fondo\ LOGIN.jpg);
+  background-image: url(/images/f-login/fondo\ LOGIN.jpg);
   background-size: cover;
 }
 
