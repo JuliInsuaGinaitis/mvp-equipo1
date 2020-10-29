@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<!--<head>
+<%- include('./partials/head')%>
+    <!--<head>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta charset="utf-8" />
     <link href='/stylesheets/style.css' rel='stylesheet' />
@@ -11,9 +12,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>-->
 
-<body>
-    <%- include('./partials/header')%>
-        <!-- <header>
+    <body>
+        <%- include('./partials/header')%>
+
+
+            <!-- <header>
         <img src="/images/f-logo/logo-j-blanco.png" class="logo" />
         <nav class="topNav">
             <ul class="headerShortcuts">
@@ -35,84 +38,84 @@
         <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
     </header>-->
 
-        <main id="main-login">
+            <main id="main-login">
 
-            <div class="card-login">
-                <div class="card-left-login">
-                    <div class="card-logo">
-                        <img src="/images/f-logo/logo-j-color.png" alt="logo">
-                    </div>
-                    <div class="card-title-login">
-                        <h1>Bienvenido/a admin</h1>
-                    </div>
+                <div class="card-login">
+                    <div class="card-left-login">
+                        <div class="card-logo">
+                            <img src="/images/f-logo/logo-j-color.png" alt="logo">
+                        </div>
+                        <div class="card-title-login">
+                            <h1>Bienvenido/a admin</h1>
+                        </div>
 
-                    <div class="card-parrafo-login">
-                        <p>Edita tus productos llenando estos campos:</p>
-                    </div>
-                    <form method="POST" action="/:id/actualizar?_method=PUT" class="card-form">
-                        <div class="all-inputs">
+                        <div class="card-parrafo-login">
+                            <p>Edita tus productos llenando estos campos:</p>
+                        </div>
+                        <form method="POST" action="/:id/actualizar?_method=PUT" class="card-form">
+                            <div class="all-inputs">
 
 
-                            <div class="form-field">
-                                <label for=""></label>
-                                <input type="text" name="nameProduct" placeholder="Nombre del Producto">
-                            </div>
+                                <div class="form-field">
+                                    <label for=""></label>
+                                    <input type="text" name="nameProduct" placeholder="Nombre del Producto">
+                                </div>
 
-                            <div class="form-field">
-                                <label for=""></label>
-                                <input type="text" name="descriptionProduct" placeholder="Descripción">
-                            </div>
-                            <div class="form-field">
-                                <label for=""></label>
-                                <input type="file" name="imageProduct" placeholder="Imagen">
-                            </div>
-                            <div class="form-field">
-                                <label for=""></label>
-                                <input type="text" name="catProduct" placeholder="Categoría">
-                            </div>
-                            <div class="form-field">
-                                <label for=""></label>
-                                <input type="color" name="colorProduct" placeholder="Color">
-                            </div>
-                            <div class="form-field">
-                                <label for=""></label>
-                                <input type="number" name="priceProduct" placeholder="Precio">
-                            </div>
-                            <!--
+                                <div class="form-field">
+                                    <label for=""></label>
+                                    <input type="text" name="descriptionProduct" placeholder="Descripción">
+                                </div>
+                                <div class="form-field">
+                                    <label for=""></label>
+                                    <input type="file" name="imageProduct" placeholder="Imagen">
+                                </div>
+                                <div class="form-field">
+                                    <label for=""></label>
+                                    <input type="text" name="catProduct" placeholder="Categoría">
+                                </div>
+                                <div class="form-field">
+                                    <label for=""></label>
+                                    <input type="color" name="colorProduct" placeholder="Color">
+                                </div>
+                                <div class="form-field">
+                                    <label for=""></label>
+                                    <input type="number" name="priceProduct" placeholder="Precio">
+                                </div>
+                                <!--
                         <div class="check-recover">
                             <input class="checkbox" name="checkbox" type="checkbox">
                             <label class="checkbox" for="">Recuerdame</label>
                             <a class="recover-password" href="*"> Olvidé mi contraseña</a>
                         </div>
                         -->
-                            <div class="form-button">
-                                <input type="submit" class="button-login" value="Actualizar">
-                                <input type="reset" class="button-signup" value="Borar Campos">
+                                <div class="form-button">
+                                    <input type="submit" class="button-login" value="Actualizar">
+                                    <input type="reset" class="button-signup" value="Borar Campos">
+                                </div>
                             </div>
+                        </form>
+
+                        <div class="card-left-footer">
+                            <p>Log in with</p>
+                            <div class="links-network">
+                                <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
+                                <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
+                            </div>
+
+
                         </div>
-                    </form>
-
-                    <div class="card-left-footer">
-                        <p>Log in with</p>
-                        <div class="links-network">
-                            <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
-                            <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
-                        </div>
-
-
                     </div>
-                </div>
-                <!--
+                    <!--
             <div class="card-right-login">
                 <img src="/images/foto REGISTRO.jpg" alt="foto guitarra">
             </div>
             -->
-            </div>
+                </div>
 
-        </main>
-        <%- include('./partials/footer')%>
-            <!-- <footer class="f-login-register">
+            </main>
+            <%- include('./partials/footer')%>
+                <!-- <footer class="f-login-register">
                 <div>
                     <p class="footerCategoryTitle">Productos</p>
                     <div class="footerItemHolder">
@@ -141,6 +144,6 @@
                     </div>
                 </div>
             </footer>-->
-</body>
+    </body>
 
 </html>
