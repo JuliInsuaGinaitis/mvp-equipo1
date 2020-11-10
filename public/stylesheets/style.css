@@ -501,7 +501,6 @@ footer:not(.f-login-register) {
   display: flex;
   justify-content: center;
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
-  background-size: cover;
 }
 
 .card-login {
