@@ -21,7 +21,7 @@ router.get('/create', controlador.createproducts) //retorna una vista//
     //ruta que ENVÍA EL PRODUCTO CREADO//
 router.post('/create', controlador.confirmcreate) //redireccionamiento//
     //ruta que muestra la EDICIÓN DE PRODUCTOS//
-router.get('/:id/edit', controlador.editproducts) //retorna una vista//
+router.get('/edit', controlador.editproducts) //retorna una vista//
     //ruta que ENVÍA EL PRODUCTO EDITADO//
 router.put('/:id/actualizar', controlador.confirmedit) //redireccionamiento//
 
