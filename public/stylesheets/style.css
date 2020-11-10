@@ -46,9 +46,11 @@ header {
 .headerLi a {
   text-decoration: none;
 }
+
 .headerLi a:link {
   color: white;
 }
+
 .headerLi a:visited {
   color: white;
 }
@@ -64,9 +66,11 @@ header {
 .navLi a {
   text-decoration: none;
 }
+
 .navLi a:link {
   color: white;
 }
+
 .navLi a:visited {
   color: white;
 }
@@ -497,10 +501,23 @@ footer:not(.f-login-register) {
 
 /* Login*/
 
+.mainCreate-Edit {
+  display: flex;
+  justify-content: center;
+  background-image: url(/images/f-login/fondo\ LOGIN.jpg);
+  background-size: cover;
+  height: 40em;
+}
+
 #main-login {
   display: flex;
   justify-content: center;
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
+  background-size: cover;
+}
+
+#em40 {
+  height: 40em;
 }
 
 .card-login {
@@ -681,6 +698,7 @@ footer:not(.f-login-register) {
 .footerLocation {
   align-self: center;
 }
+
 /*Estilos ProductDetail By Juli*/
 
 /*.navegador {
@@ -712,11 +730,13 @@ footer:not(.f-login-register) {
   position: relative;
   height: 600px;
 }
+
 .precio-final {
   color: red;
   font-size: x-large;
   font-weight: 200;
 }
+
 .product-detail {
   display: flex;
   flex-direction: row;
@@ -726,6 +746,7 @@ footer:not(.f-login-register) {
 .agregar-al-carrito {
   color: #10325e;
 }
+
 .payment-methods {
   margin-top: 100px;
   box-sizing: content-box;
@@ -740,6 +761,7 @@ footer:not(.f-login-register) {
   align-items: end;
   border-radius: 35px;
 }
+
 .recomendados {
   text-align: center;
   color: rgb(175, 170, 170);
@@ -778,12 +800,15 @@ footer:not(.f-login-register) {
   font-size: 20px;
   border-radius: 31px 31px 0% 0%;
 }
+
 .quick_desc {
   color: grey;
 }
+
 .img-payment-methods {
   position: center;
 }
+
 .payment-conditions1 {
   padding: 10px 10px 10px 10px;
   margin: 15px;
@@ -791,11 +816,13 @@ footer:not(.f-login-register) {
   text-align: left;
   font-size: 15px;
 }
+
 .payment-conditions2 {
   padding-left: 50px;
   text-align: left;
   font-size: 15px;
 }
+
 .calcular {
   border-radius: 0 20px 20px 0;
   border: 2px solid grey;
@@ -805,18 +832,21 @@ footer:not(.f-login-register) {
   background-color: white;
   float: center;
 }
+
 .no-se-cp {
   font-size: 12px;
   text-align: left;
   color: grey;
   margin-left: 20px;
 }
+
 .cp {
   border-radius: 20px 0 0 20px;
   width: 200px;
   height: 50px;
   float: center;
 }
+
 /*Fin Estilos ProductDetail By Juli*/
 
 /* CSS TUTE (productCART) */
@@ -824,58 +854,76 @@ footer:not(.f-login-register) {
 .d-flex {
   display: flex;
 }
+
 .f-direction-r {
   flex-direction: row;
 }
+
 .f-direction-c {
   flex-direction: column;
 }
+
 .align-items {
   align-items: flex-start;
 }
+
 .align-items-end {
   align-items: flex-end;
 }
+
 .j-content {
   justify-content: space-around;
 }
+
 .m-left {
   margin-left: 40px;
 }
+
 .m-right {
   margin-right: 20px;
 }
+
 .m-top {
   margin-top: 6px;
 }
+
 .button-red {
   background-color: red;
   color: white;
 }
+
 .float-r {
   float: right;
 }
+
 .m-total {
   margin: 10px;
 }
+
 .centro {
   text-align: center;
 }
+
 .m-botton {
   margin-bottom: -20px;
 }
+
 .line-height {
   line-height: 32px;
 }
+
 .font-weight {
   font-weight: 600;
 }
+
 .color-red {
   color: red;
 }
+
 .color-gray {
   color: gray;
 }
+
 .color-black {
   color: black;
 }
@@ -1009,20 +1057,25 @@ button {
 /* FIN CSS tute */
 
 /* css By Juli*/
+
 .footer-pd {
   margin-top: 50px;
 }
+
 /* Fin Footer ProductDetail By Juli*/
 
 /* Product List */
+
 .sidebarAlignment {
   display: flex;
   flex-direction: row;
 }
+
 .pageBody {
   display: flex;
   flex-direction: column;
 }
+
 .productListSubHeader {
   display: flex;
   flex-direction: column;
@@ -1031,11 +1084,13 @@ button {
   border-bottom-color: lightgray;
   margin-top: 5px;
 }
+
 .productTitle {
   font-weight: 600;
   font-size: 16px;
   margin-left: 5%;
 }
+
 .productListNav {
   display: flex;
   flex-direction: row;
@@ -1044,6 +1099,7 @@ button {
   border-top-width: 1px;
   border-top-color: lightgray;
 }
+
 .plNavItem {
   border-right: solid;
   border-right-width: 1px;
@@ -1051,21 +1107,26 @@ button {
   align-self: center;
   padding-right: 20px;
 }
+
 .plNavItemEscaped {
   align-self: center;
   padding-right: 20px;
 }
+
 .plNavItemText {
   font-size: 15px;
   color: gray;
 }
+
 .plNavItemLabel {
   font-size: 15px;
   color: gray;
 }
+
 .plNavSelect {
   margin-left: 5px;
 }
+
 .sidebar {
   display: flex;
   width: 290px;
@@ -1075,24 +1136,30 @@ button {
   height: 600px;
   justify-content: space-around;
 }
+
 .sidebarCategory {
   display: flex;
   flex-direction: column;
 }
+
 .sidebarCategoryTitle {
   font-size: 12px;
   font-weight: 600;
 }
+
 .sidebarItem {
   font-size: 12px;
 }
+
 .sidebarCheckbox {
   margin-right: 3px;
 }
+
 .pagination {
   display: inline-block;
   margin-top: 3px;
 }
+
 .pagination a {
   color: black;
   float: left;
@@ -1109,9 +1176,11 @@ button {
   background-color: red;
   color: white;
 }
+
 .pagination a:hover:not(.active) {
   background-color: #ddd;
 }
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -1120,6 +1189,7 @@ button {
   border-left-width: 1px;
   border-left-color: lightgray;
 }
+
 .productCard {
   width: 400px;
   box-shadow: black 2px;
@@ -1162,26 +1232,32 @@ button {
   font-size: 16px;
   font-weight: 900;
 }
+
 .advertsSection {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
 }
+
 .advertBannerContainer {
   width: 50%;
   height: 50%;
 }
+
 .advertBanner {
   width: 99%;
   height: 95%;
 }
+
 .partnerBrandsContainer {
   align-self: center;
 }
+
 .networkBannerContainer {
   width: 100%;
   height: 80%;
 }
+
 .networkBanner {
   width: 100%;
   height: 80%;
