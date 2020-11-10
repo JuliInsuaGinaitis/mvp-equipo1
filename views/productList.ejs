@@ -75,94 +75,9 @@
     </div>
       
       <section class="products">
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/strato-fender-1.png" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Elite Stratocaster Estuche USA</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$21.337,53</p>
-          <div class="productPrecioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$384.072,58</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/danelectro-longhorn.png" class="productImg"></a>
-          <p class="productBrand">DANELECTRO</p>
-          <p class="productName">Guitarra Eléctrica Danelectro</br>Longhorn</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$28.666,66</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$516.000</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/gretsch-electromatic-g5420t.png" class="productImg"></a>
-          <p class="productBrand">GRETSCH</p>
-          <p class="productName">Guitarra Eléctrica Gretsch</br>Electromatic G5420T</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$37.223</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$670.014</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/jackson-js11-dinky-tremolo-rw.png" class="productImg"></a>
-          <p class="productBrand">JACKSON</p>
-          <p class="productName">Guitarra Eléctrica Jackson</br>JS11 Dinky Tremolo RW</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$1985,67</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$35.742</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/american-fender-jazzmaster.png" class="productImg"></a>
-          <p class="productBrand">FENDER</p>
-          <p class="productName">Guitarra Eléctrica American</br>Jazzmaster</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$18.422,5</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$331.605</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/prs-se-paul.png" class="productImg"></a>
-          <p class="productBrand">PRS</p>
-          <p class="productName">Guitarra Eléctrica Paul Reed Smith SE</br>Paul's Amber</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$25.944,44</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$467.000</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/gretsch-g6120tb-de-duane-eddy.png" class="productImg"></a>
-          <p class="productBrand">GRETSCH</p>
-          <p class="productName">Guitarra Eléctrica Gretsch</br>G6120T-DE Duane Eddy</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$44.427,22</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$800.590</p>
-          </div>
-        </article>
-        <article class="productCard">
-          <a href="/productDetail"><img src="images/f-productList/schecter-banshee-6-extreme.png" class="productImg"></a>
-          <p class="productBrand">SCHECTER</p>
-          <p class="productName">Guitarra Eléctrica Schecter</br>Banshee 6 Extreme Charcoal Burst</p>
-          <p class="productCuotas">18 cuotas sin interés de</p>
-          <p class="productPrecio">$3.521,22</p>
-          <div class="precioFinalDiv">
-          <p style="font-size: 13px">Precio final: </p>
-          <p class="productprecioFinal">$63.382</p>
-          </div>
-        </article>
+        <% for (let i = 0; i < productsList.length; i++){ %>
+          <%- include('./partials/productCard')%>
+          <%}%>
         </section>
         <div class="advertsSection">
           <div class="advertBannerContainer">
