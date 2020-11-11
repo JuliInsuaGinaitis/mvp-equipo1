@@ -7,10 +7,10 @@ const productsList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controlador = {
     listadoProductos: (req, res) => {
 
-        res.render('productList', { productsList: productsList });
+        res.render('productList', { productsList: productsList.products });
     },
     index: (req, res) => {
-        res.render('index', { productsList: productsList }); // 
+        res.render('index', { productsList: productsList.products }); // 
     },
 
     cart: (req, res) => {
