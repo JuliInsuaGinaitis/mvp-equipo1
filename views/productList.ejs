@@ -76,7 +76,7 @@
       
       <section class="products">
         <% for (let i = 0; i < productsList.length; i++){ %>
-          <%- include('./partials/productCard')%>
+          <%- include('./partials/productCard', {product: productsList[i]})%>
           <%}%>
         </section>
         <div class="advertsSection">
