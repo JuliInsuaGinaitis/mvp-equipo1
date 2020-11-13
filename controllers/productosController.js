@@ -18,9 +18,13 @@ const controlador = {
     },
 
     detail: (req, res) => {
+        let product = productsList.products.find(function(product){
+            return req.params.id == product.id;
+            
+        })
+        console.log(productsList);
 
-
-        res.render('productDetail', { productsList: productsList.products, id: req.params.id - 1 }); // detalle de cada producto//
+        res.render('productDetail', { product }); // detalle de cada producto//
     },
 
     register: (req, res) => {
