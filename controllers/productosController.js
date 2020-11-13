@@ -38,19 +38,83 @@ const controlador = {
 
         res.render('createProducts');
     },
-    confirmcreate: (req, res) => {
+    confirmcreate: (req, res, next) => {
+        // Guardo el nombre de la imagen
+
+
+        var filename = req.files.map(function(file) {
+            return file.filename.toString();
+        });
+        let producto = { //recupero los datos del form//
+            id: productsList.length + 1,
+            name: req.body.name,
+            price: req.body.price,
+            mainCategory: req.body.category,
+            description: req.body.description,
+            image: filename
+        };
+
+
+        productsList.products.push(producto);
+        productsJSON = JSON.stringify(productsList);
+
+        fs.writeFileSync(productsFilePath, productsJSON); // Escribe en el json?? //
+
+
         console.log(req.body)
-        res.send('VA POR POST!!!!');
+
+        res.redirect('/')
     },
+
+
     editproducts: (req, res) => {
-        res.render('editProducts');
+        res.render('editProducts', { productsList: productsList, id: req.params.id - 1 });
     },
     confirmedit: (req, res) => {
-        console.log(req.body)
-        res.send('VA POR PUT!!!!');
+
+
+        var filename = req.files.map(function(file) {
+            return file.filename.toString();
+        });
+        // recupero los datos del form//
+        productsList.forEach(function(product) {
+            if (product.id == req.params.id) {
+                //console.log(producto)
+                product.name = req.body.name;
+                product.price = req.body.price;
+                product.discount = req.body.discount;
+                product.category = req.body.category;
+                product.description = req.body.description;
+                product.image = filename;
+            }
+        });
+        // los empaqueto en un JSON
+        productsJSON = JSON.stringify(productsList);
+
+
+        // Escribimos nuevamente el archivo productsDataBase.json
+        fs.writeFileSync(productsFilePath, productsJSON);
+
+        //console.log(req.body)
+        res.redirect('/');
+
+
+    },
+    //NO HAY BOTON DELETE!!!!!//
+    destroy: (req, res) => {
+        // Aca buscamos y borramos//
+        let eliminar = productsList.filter(function(product) {
+                return product.id != req.params.id;
+            })
+            // los empaqueto en json
+        productsJSON = JSON.stringify(eliminar);
+
+
+        fs.writeFileSync(productsFilePath, productsJSON);
+
+        //console.log('se elimino el producto ' + req.params.id) // muestra por consola lo eliminado
+        res.redirect('/')
     }
-
-
 
 
 
