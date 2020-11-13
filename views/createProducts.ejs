@@ -42,34 +42,34 @@
                         <div class="card-parrafo-login">
                             <p>Carga tus nuevos productos llenando estos campos:</p>
                         </div>
-                        <form action="/create" method="POST" class="card-form">
+                        <form action="/create" enctype="multipart/form-data" method="POST" class="card-form">
                             <div class="all-inputs">
 
 
                                 <div class="form-field">
                                     <label for=""></label>
-                                    <input type="text" name="nameProduct" placeholder="Nombre del Producto">
+                                    <input type="text" name="name" placeholder="Nombre del Producto">
                                 </div>
 
                                 <div class="form-field">
                                     <label for=""></label>
-                                    <input type="text" name="descriptionProduct" placeholder="Descripción">
+                                    <input type="text" name="description" placeholder="Descripción">
                                 </div>
                                 <div class="form-field">
                                     <label for=""></label>
-                                    <input type="file" name="imageProduct" placeholder="Imagen">
+                                    <input type="file" name="image" placeholder="Imagen">
                                 </div>
                                 <div class="form-field">
                                     <label for=""></label>
-                                    <input type="text" name="catProduct" placeholder="Categoría">
+                                    <input type="text" name="category" placeholder="Categoría">
                                 </div>
                                 <div class="form-field">
                                     <label for=""></label>
-                                    <input type="color" name="colorProduct" placeholder="Color">
+                                    <input type="color" name="color" placeholder="Color">
                                 </div>
                                 <div class="form-field">
                                     <label for=""></label>
-                                    <input type="number" name="priceProduct" placeholder="Precio">
+                                    <input type="number" name="price" placeholder="Precio">
                                 </div>
 
                                 <!-- <div class="check-recover">
