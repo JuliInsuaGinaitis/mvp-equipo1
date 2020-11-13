@@ -8,32 +8,33 @@
 <%- include('./partials/nav')%>
 
 </body>
+
 <div class="section-title">
   <p>Guitarras/electricas</p>
   </div>
 <section class="product-detail">
 <div class="galeria-producto">
   <i class="fas fa-chevron-up"></i>
-  <a><img src="images\f-productDetail\foto-chica-detail-1.jpg" ></a>
-  <a><img src="images\f-productDetail\foto-chica-detail-2.jpg" ></a>
-  <a><img src="images\f-productDetail\foto-chica-detail-3.jpg" ></a>
+  <a><img src="/<%= product.image %>" ></a>
+  <a><img src="/<%= product.image2 %>" ></a>
+  <a><img src="/<%= product.image3 %>" ></a>
   <i class="fas fa-chevron-down"></i>
 </div>
 
 <div class="product">
-<a><img src="images\f-productDetail\foto-grande-0001.jpg" height="600px"></a>
+<a><img src="/<%= product.image %>" height="600px"></a>
 </div>
 <article class="item-description">
 <div class="description">
 <div class="marca">
-  <h2>FENDER</h2><br>
-  <h3>Guitarra Electrica American Elite Stratocaster Estuche USA</h3><br>
+  <h2><%= product.brand %></h2><br>
+  <h3><%= product.name %></h3><br>
   <div class="precio">
     <span class="cuotas">18 cuotas de</span>
-    <span class="valor-cuotas">$21337,57.-</span><br>
-    <span class="precio-final">$384.075,48</span><br>
+    <span class="valor-cuotas">$<%= product.price %></span><br>
+    <span class="precio-final">$<%= product.finalPrice %></span><br>
   </div><br>
-  <p class="quick_desc"> Cuerpo de Maple<br> Mastil de Arce<br>Forma de mástil compuesto moderno en 'C' a 'D'<br>22 trastes medium jumbo<br> Escala de 648mm<br>Cejilla de Hueso sintetico de 42,8mm</p>
+  <p class="quick_desc"><%= product.description %></p>
   <div class="quantity_box"><br><br><br><br><br>
       <span>Cantidad:</span>
     <div class="product-qty">
