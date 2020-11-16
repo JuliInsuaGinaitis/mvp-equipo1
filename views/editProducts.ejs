@@ -51,36 +51,44 @@
                         </div>
 
                         <div class="card-parrafo-login">
-                            <p>Edita tus productos llenando estos campos:</p>
+                            <p>Edita y borra tus productos llenando estos campos:</p>
                         </div>
-                        <form method="POST" action="/edit/:id?_method=PUT" class="card-form">
+                        <form method="POST" action="/edit/<%=productsList.products[id].id%>?_method=PUT" class="card-form" enctype="multipart/form-data">
                             <div class="all-inputs">
 
 
                                 <div class="form-field">
-                                    <label for=""></label>
-                                    <input type="text" name="name" placeholder="Nombre del Producto">
+                                    <label for="">Nombre del Producto</label>
+                                    <input type="text" name="name" value="<%=productsList.products[id].name%>">
                                 </div>
 
                                 <div class="form-field">
-                                    <label for=""></label>
-                                    <input type="text" name="description" placeholder="Descripción">
+                                    <label for="">Descripción</label>
+                                    <input type="text" name="description" value="<%=productsList.products[id].description%>">
                                 </div>
                                 <div class="form-field">
-                                    <label for=""></label>
+                                    <label for="">Imagen</label>
                                     <input type="file" name="image" placeholder="Imagen">
                                 </div>
                                 <div class="form-field">
-                                    <label for=""></label>
-                                    <input type="text" name="mainCategory" placeholder="Categoría">
+                                    <label for="">Categoria</label>
+                                    <input type="text" name="mainCategory" value="<%=productsList.products[id].mainCategory%>">
                                 </div>
                                 <div class="form-field">
-                                    <label for=""></label>
+                                    <label for="">Subcategoria</label>
+                                    <input type="text" name="subCategory" value="<%=productsList.products[id].subCategory%>">
+                                </div>
+                                <div class="form-field">
+                                    <label for="">Color</label>
                                     <input type="color" name="color" placeholder="Color">
                                 </div>
                                 <div class="form-field">
-                                    <label for=""></label>
-                                    <input type="number" name="price" placeholder="Precio">
+                                    <label for="">Precio</label>
+                                    <input type="text" name="price" value="<%=productsList.products[id].price%>">
+                                </div>
+                                <div class="form-field">
+                                    <label for="">Precio Final</label>
+                                    <input type="text" name="price" value="<%=productsList.products[id].finalPrice%>">
                                 </div>
                                 <!--
                         <div class="check-recover">
@@ -91,11 +99,16 @@
                         -->
                                 <div class="form-button">
                                     <input type="submit" class="button-login" value="Actualizar">
-                                    <input type="reset" class="button-signup" value="Borar Campos">
+
                                 </div>
                             </div>
                         </form>
-
+                        <div>
+                            <!--******* NUEVO BOTON BORRADO DE PRODUCTO********-->
+                            <form action="/delete/<%=productsList.products[id]%>?_method=DELETE" method="POST">
+                                <input type="submit" class="button-signup" value="Borrar Producto">
+                            </form>
+                        </div>
                         <div class="card-left-footer">
                             <p>Log in with</p>
                             <div class="links-network">

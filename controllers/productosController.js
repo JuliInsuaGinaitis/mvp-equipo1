@@ -18,9 +18,9 @@ const controlador = {
     },
 
     detail: (req, res) => {
-        let product = productsList.products.find(function(product){
+        let product = productsList.products.find(function(product) {
             return req.params.id == product.id;
-            
+
         })
         console.log(productsList);
 
@@ -50,7 +50,7 @@ const controlador = {
             return file.filename.toString();
         });
         let producto = { //recupero los datos del form//
-            id: productsList.length + 1,
+            id: productsList.products.length + 1,
             name: req.body.name,
             price: req.body.price,
             mainCategory: req.body.category,
@@ -65,7 +65,7 @@ const controlador = {
         fs.writeFileSync(productsFilePath, productsJSON); // Escribe en el json?? //
 
 
-        console.log(req.body)
+        //console.log(req.body)
 
         res.redirect('/')
     },
@@ -83,7 +83,7 @@ const controlador = {
         // recupero los datos del form//
         productsList.forEach(function(product) {
             if (product.id == req.params.id) {
-                //console.log(producto)
+                //console.log(product)
                 product.name = req.body.name;
                 product.price = req.body.price;
                 product.discount = req.body.discount;
