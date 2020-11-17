@@ -82,6 +82,7 @@ const controlador = {
         productsList.products.forEach(function(product) {
             if (product.id == req.params.id) {
                 //console.log(product)
+                product.brand = req.body.brand;
                 product.name = req.body.name;
                 product.price = req.body.price;
                 product.discount = req.body.discount;
