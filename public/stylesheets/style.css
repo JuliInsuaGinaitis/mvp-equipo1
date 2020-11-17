@@ -734,7 +734,8 @@ footer:not(.f-login-register) {
 .precio-final {
   color: red;
   font-size: x-large;
-  font-weight: 200;
+  font-weight: bold;
+  text-decoration: bold ;
 }
 
 .product-detail {
@@ -828,8 +829,8 @@ footer:not(.f-login-register) {
   border: 2px solid grey;
   width: 100px;
   height: 50px;
-  color: grey;
-  background-color: white;
+  color: white;
+  background-color: grey;
   float: center;
 }
 
@@ -837,7 +838,7 @@ footer:not(.f-login-register) {
   font-size: 12px;
   text-align: left;
   color: grey;
-  margin-left: 20px;
+  margin-left: 70px;
 }
 
 .cp {
@@ -1261,4 +1262,61 @@ button {
 .networkBanner {
   width: 100%;
   height: 80%;
+}
+
+.btn-primary {
+  display: inline-flexbox;
+  padding: 13px;
+  background-color: #10325e;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border-radius: 30px;
+  float: center;
+  width: 30%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.product-qty{
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #000000;
+    fill: #000000;
+    background-color: #FFFFFF;
+  width: 20%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.banner-contact-container{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  vertical-align: right;
+  float: right;
+  box-sizing: content-box;
+}
+
+.banner-contact{
+
+  height: 500px;
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  vertical-align: bottom;
+  float:right;
+ 
+}
+.contacto{
+
+  float: letf;
+  padding: 25px;
 }
