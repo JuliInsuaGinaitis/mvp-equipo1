@@ -47,7 +47,7 @@ const controlador = {
 
 
         var filename = req.files.map(function(file) {
-            return "images/products/" + file.filename.toString();
+            return "/images/products/" + file.filename.toString();
         });
 
 
@@ -76,7 +76,7 @@ const controlador = {
 
 
         var filename = req.files.map(function(file) {
-            return "images/products/" + file.filename.toString();
+            return "/images/products/" + file.filename.toString();
         });
         // recupero los datos del form//
         productsList.products.forEach(function(product) {
