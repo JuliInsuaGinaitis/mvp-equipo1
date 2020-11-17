@@ -50,7 +50,7 @@ const controlador = {
             return file.filename.toString();
         });
         let producto = { //recupero los datos del form//
-            id: productsList.length + 1,
+            id: productsList.products.length + 1,
             name: req.body.name,
             price: req.body.price,
             mainCategory: req.body.category,
