@@ -39,7 +39,7 @@
         <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
     </header>-->
 
-            <main class="mainCreate-Edit" ,>
+            <main class="main-Edit" ,>
 
                 <div class="card-login">
                     <div class="card-left-login">
@@ -63,8 +63,8 @@
                                 </div>
 
                                 <div class="form-field">
-                                    <label for="">Descripción</label>
-                                    <input type="text" name="description" value="<%=productsList.products[id].description%>">
+                                    <label for="">Descripción</label><br>
+                                    <textarea class="textarea" rows="8" cols="54" name="description" value=>"<%=productsList.products[id].description%>"</textarea>
                                 </div>
                                 <div class="form-field">
                                     <label for="">Imagen</label>
@@ -103,13 +103,14 @@
                                 </div>
                             </div>
                         </form>
-                        <div>
-                            <!--******* NUEVO BOTON BORRADO DE PRODUCTO********-->
+                        
+                          <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
+                          <div>
                             <form action="/delete/<%=id +1%>?_method=DELETE" method="POST">
                                 <input type="submit" class="button-signup" value="Borrar Producto">
                             </form>
                         </div>
-                        <div class="card-left-footer">
+                        <!--<div class="card-left-footer">
                             <p>Log in with</p>
                             <div class="links-network">
                                 <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
@@ -118,7 +119,7 @@
                             </div>
 
 
-                        </div>
+                        </div>-->
                     </div>
                     <!--
             <div class="card-right-login">

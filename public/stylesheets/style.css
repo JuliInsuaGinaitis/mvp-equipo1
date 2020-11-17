@@ -1323,6 +1323,17 @@ button {
 }
 .contacto-temporal{
   width:80% ;
-margin-right: 10% ;
+  margin-right: 10% ;
   margin-left: 10%;
+}
+
+.textarea{
+  border: 1px solid #dedede;
+}
+.main-Edit {
+  display: flex;
+  justify-content: center;
+  background-image: url(/images/f-login/fondo\ LOGIN.jpg);
+  background-size: cover;
+  height: 100%;
 }
