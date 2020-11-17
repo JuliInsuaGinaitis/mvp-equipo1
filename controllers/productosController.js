@@ -63,7 +63,7 @@ const controlador = {
         fs.writeFileSync(productsFilePath, productsJSON); // Escribe en el json?? //
 
 
-        //console.log(req.body)
+        console.log(req.body)
 
         res.redirect('/productList')
     },
@@ -86,7 +86,8 @@ const controlador = {
                 product.name = req.body.name;
                 product.price = req.body.price;
                 product.discount = req.body.discount;
-                product.category = req.body.category;
+                product.mainCategory = req.body.mainCategory;
+                product.subCategory = req.body.subCategory;
                 product.description = req.body.description;
                 product.image = filename;
             }

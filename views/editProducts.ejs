@@ -58,6 +58,10 @@
 
 
                                 <div class="form-field">
+                                    <label for="">Marca</label>
+                                    <input type="text" name="brand" value="<%=productsList.products[id].brand%>">
+                                </div>
+                                <div class="form-field">
                                     <label for="">Nombre del Producto</label>
                                     <input type="text" name="name" value="<%=productsList.products[id].name%>">
                                 </div>
@@ -68,7 +72,7 @@
                                 </div>
                                 <div class="form-field">
                                     <label for="">Imagen</label>
-                                    <input type="file" name="image" placeholder="Imagen" >
+                                    <input type="file" name="image" placeholder="Imagen">
                                 </div>
                                 <div class="form-field">
                                     <label for="">Categoria</label>
@@ -103,9 +107,9 @@
                                 </div>
                             </div>
                         </form>
-                        
-                          <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
-                          <div>
+
+                        <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
+                        <div>
                             <form action="/delete/<%=id +1%>?_method=DELETE" method="POST">
                                 <input type="submit" class="button-signup" value="Borrar Producto">
                             </form>
