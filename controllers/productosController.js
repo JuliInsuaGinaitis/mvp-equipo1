@@ -47,19 +47,17 @@ const controlador = {
 
 
         var filename = req.files.map(function(file) {
-            return file.filename.toString();
+            return "images/products/" + file.filename.toString();
         });
-        let producto = { //recupero los datos del form//
-            id: productsList.products.length + 1,
-            name: req.body.name,
-            price: req.body.price,
-            mainCategory: req.body.category,
-            description: req.body.description,
-            image: filename
-        };
 
 
-        productsList.products.push(producto);
+        productsList.products.push({
+            id: productsList.products[productsList.products.length - 1].id + 1,
+            image: filename,
+            ...req.body
+        });
+
+
         productsJSON = JSON.stringify(productsList);
 
         fs.writeFileSync(productsFilePath, productsJSON); // Escribe en el json?? //
@@ -67,7 +65,7 @@ const controlador = {
 
         //console.log(req.body)
 
-        res.redirect('/')
+        res.redirect('/productList')
     },
 
 
@@ -78,10 +76,10 @@ const controlador = {
 
 
         var filename = req.files.map(function(file) {
-            return file.filename.toString();
+            return "images/products/" + file.filename.toString();
         });
         // recupero los datos del form//
-        productsList.forEach(function(product) {
+        productsList.products.forEach(function(product) {
             if (product.id == req.params.id) {
                 //console.log(product)
                 product.name = req.body.name;
@@ -100,24 +98,26 @@ const controlador = {
         fs.writeFileSync(productsFilePath, productsJSON);
 
         //console.log(req.body)
-        res.redirect('/');
+        res.redirect('/productList');
 
 
     },
     //NO HAY BOTON DELETE!!!!!//
     destroy: (req, res) => {
         // Aca buscamos y borramos//
-        let eliminar = productsList.filter(function(product) {
-                return product.id != req.params.id;
-            })
+        let afterDelete = productsList.products.filter(function(product) {
+            return product.id != req.params.id;
+        })
+
+        let producto = { products: afterDelete }
             // los empaqueto en json
-        productsJSON = JSON.stringify(eliminar);
+        productsJSON = JSON.stringify(producto);
 
 
         fs.writeFileSync(productsFilePath, productsJSON);
-
-        //console.log('se elimino el producto ' + req.params.id) // muestra por consola lo eliminado
-        res.redirect('/')
+        //console.log(JSON.stringify(req.params.id))
+        console.log('se elimino el producto ', req.params.id) // muestra por consola lo eliminado
+        res.redirect('/productList')
     }
 
 
