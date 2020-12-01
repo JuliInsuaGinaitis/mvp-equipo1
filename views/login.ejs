@@ -2,69 +2,81 @@
 <html>
 <%- include('./partials/head')%>
 
-<body>
+    <body>
 
-    <%- include('./partials/header')%>
+        <%- include('./partials/header')%>
 
-    <main id="main-login">
+            <main id="main-login">
 
-        <div class="card-login">
-            <div class="card-left-login">
-                <div class="card-logo">
-                    <img src="images/f-logo/logo-j-color.png" alt="logo">
-                </div>
-                <div class="card-title-login">
-                    <h1>Bienvenido</h1>
-                </div>
-
-                <div class="card-parrafo-login">
-                    <p>Gracias por volver, por favor logueate en tu cuenta llenando estos campos</p>
-                </div>
-                <form action="#" class="card-form">
-                    <div class="all-inputs">
-
-
-                        <div class="form-field">
-                            <label for=""></label>
-                            <input type="email" name="email" placeholder="Email">
+                <div class="card-login">
+                    <div class="card-left-login">
+                        <div class="card-logo">
+                            <img src="images/f-logo/logo-j-color.png" alt="logo">
+                        </div>
+                        <div class="card-title-login">
+                            <h1>Bienvenido</h1>
                         </div>
 
-                        <div class="form-field">
-                            <label for=""></label>
-                            <input type="password" name="constraseña" placeholder="Contraseña">
+                        <div class="card-parrafo-login">
+                            <p>Gracias por volver, por favor logueate en tu cuenta llenando estos campos</p>
                         </div>
+                        <%if(typeof errors != 'undefined'){%>
+                            <p style="color: red">ERROR!!</p>
+                            <ul>
+                                <% errors.forEach(function(elemento){ %>
+                                    <li>
+                                        <%= elemento.msg %>
+                                    </li>
 
-                        <div class="check-recover">
-                            <input class="checkbox" name="checkbox" type="checkbox">
-                            <label class="checkbox" for="">Recuerdame</label>
-                            <a class="recover-password" href="*"> Olvidé mi contraseña</a>
-                        </div>
+                                    <% }) %>
+                            </ul>
+                            <% } %>
+                                <form action="/login" method="POST" class="card-form">
+                                    <div class="all-inputs">
 
-                        <div class="form-button">
-                            <input type="submit" class="button-login" value="LOGIN">
-                            <input type="submit" class="button-signup" value="SING UP">
-                        </div>
+
+
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="email" name="email" placeholder="Email">
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="password" name="password" placeholder="Contraseña">
+                                        </div>
+
+                                        <div class="check-recover">
+                                            <input class="checkbox" name="checkbox" type="checkbox">
+                                            <label class="checkbox" for="">Recuerdame</label>
+                                            <a class="recover-password" href="*"> Olvidé mi contraseña</a>
+                                        </div>
+
+                                        <div class="form-button">
+                                            <input type="submit" class="button-login" value="LOGIN">
+                                            <input type="submit" class="button-signup" value="SING UP">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="card-left-footer">
+                                    <p>Log in with</p>
+                                    <div class="links-network">
+                                        <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
+                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
+                                        <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
+                                    </div>
+
+
+                                </div>
                     </div>
-                </form>
-                <div class="card-left-footer">
-                    <p>Log in with</p>
-                    <div class="links-network">
-                        <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
-                        <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
+                    <div class="card-right-login">
+                        <img src="images/f-login/foto LOGIN.jpg" alt="foto guitarra">
                     </div>
-
-
                 </div>
-            </div>
-            <div class="card-right-login">
-                <img src="images/f-login/foto LOGIN.jpg" alt="foto guitarra">
-            </div>
-        </div>
-    </main>
+            </main>
 
-<%- include('./partials/footer')%>
+            <%- include('./partials/footer')%>
 
-</body>
+    </body>
 
 </html>

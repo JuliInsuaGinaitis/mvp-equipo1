@@ -3,6 +3,14 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path');
 const controlador = require('../controllers/productosController.js');
+const checkRegister = require('../middlewares/checkregister');
+const checkLogin = require('../middlewares/checkLogin')
+    //const {check} = require ('express-validator')//REQUERIMOS  para validar campos de los form//
+
+
+
+
+
 
 //funcionamiento MULTER//
 
@@ -23,10 +31,13 @@ var upload = multer({ storage: storage })
 router.get('/', controlador.index);
 
 router.get('/register', controlador.register);
+router.post('/register', upload.any(), checkRegister, controlador.createUser); //AGREGA USER//
 
 router.get('/login', controlador.login);
+router.post('/login', checkLogin, controlador.processLogin); // LOGEA AL CLIENTE/
 
 router.get('/contact', controlador.contact);
+
 
 router.get('/productCart', controlador.cart);
 

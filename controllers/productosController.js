@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const productsList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator');
+const userData = require('../data/user');
 
 
 const controlador = {
@@ -28,11 +31,81 @@ const controlador = {
     },
 
     register: (req, res) => {
-        res.render('register');
+        res.render('register', { data: {} });
     },
+    createUser: (req, res) => {
+
+        var filename = req.files.map(function(file) {
+            return "/images/products/" + file.filename.toString();
+        });
+
+        let errors = validationResult(req)
+        if (!errors.isEmpty()) {
+
+            return res.render('register', { errors: errors.errors, data: req.body })
+        }
+
+
+        userData.create({
+            name: req.body.name,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            confirmPassword: bcryptjs.hashSync(req.body.confirmPassword, 5),
+            image: filename
+
+        })
+        res.render('createUser');
+    },
+
+
+
+
     login: (req, res) => {
-        res.render('login');
+        res.render('login', { data: {} });
     },
+
+    processLogin: (req, res) => { // RECORREMOS EL JSON DE USER, Y VEMOS SI MATCHEA LO QUE VIENE DEL FORM CON ALGUN DATO EN EL JSON, ASI ESTARIAMOS VALIDANDO UN LOGIN//
+
+        let errors = validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.render('login', { errors: errors.errors, data: req.body })
+        }
+
+        let user = userData.findByEmail(req.body.email)
+        if (!user) {
+            return res.render('login', { errors: [{ msg: 'El email es incorrecto' }] })
+        } else if (bcryptjs.compareSync(req.body.password, user.password)) {
+            //console.log(session)
+            req.session.user = user.email
+            console.log(req.session.user)
+
+            return res.redirect('/productList')
+
+        } else {
+            return res.render('login', { errors: [{ msg: 'La contraseña es incorrecta' }] })
+        }
+
+
+
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     contact: (req, res) => {
         res.render('contact');
     },

@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html>
- <%- include('./partials/head')%>
+<%- include('./partials/head')%>
 
-<body>
- <%- include('./partials/header')%>
+    <body>
+        <%- include('./partials/header')%>
 
- <main id="main-register">
+            <main id="main-register">
 
-    <div class="card-register">
-        <div class="card-left-register">
-            <div class="card-logo">
-                <img src="images/f-logo/logo-j-color.png" alt="logo">
-            </div>
-            <div class="card-title-register">
-                <h1>Crea tu usuario </h1>
-            </div>
+                <div class="card-register">
+                    <div class="card-left-register">
+                        <div class="card-logo">
+                            <img src="images/f-logo/logo-j-color.png" alt="logo">
+                        </div>
+                        <div class="card-title-register">
+                            <h1>Crea tu usuario </h1>
+                        </div>
 
-            <div class="card-parrafo-register">
-                <p>Por favor, llena estos campos para poder registrarte</p>
-            </div>
-            <form action="#" class="card-form" method="">
-                <div class="all-inputs">
+                        <div class="card-parrafo-register">
+                            <p>Por favor, llena estos campos para poder registrarte</p>
+                        </div>
+                        <%if(typeof errors != 'undefined'){%>
+                            <p style="color: red">ERROR!!</p>
+                            <ul>
+                                <% errors.forEach(function(elemento){ %>
+                                    <li>
+                                        <%= elemento.msg %>
+                                    </li>
+
+                                    <% }) %>
+                            </ul>
+                            <% } %>
+                                <form action="/register" method="POST" class="card-form" enctype="multipart/form-data">
+                                    <div class="all-inputs">
 
 
-                    <div class="form-field">
-                        <label for=""></label>
-                        <input type="text" name="nombre y apellido" placeholder="Nombre y Apellido">
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="text" name="name" placeholder="Nombre y Apellido" value="<%=data.name%>">
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="email" name="email" placeholder="Email" value="<%=data.email%>">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="password" name="password" placeholder="Contraseña" value="<%=data.password%>">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" value="<%=data.confirmPassword%>">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for=""></label>
+                                            <input type="file" name="file" placeholder="Avatar" value="<%=data.file%>">
+                                        </div>
+
+                                        <div class="form-button">
+                                            <input type="submit" class="button-createuser" value="CREAR USUARIO">
+
+                                        </div>
+                                    </div>
+                                </form>
+
                     </div>
-
-                    <div class="form-field">
-                        <label for=""></label>
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="form-field">
-                        <label for=""></label>
-                        <input type="password" name="contraseña" placeholder="Contraseña">
-                    </div>
-                    <div class="form-field">
-                        <label for=""></label>
-                        <input type="password" name="confirmar contraseña" placeholder="Confirmar contraseña">
-                    </div>
-
-                    <div class="form-button">
-                        <input type="submit" class="button-createuser" value="CREAR USUARIO">
-
+                    <div class="card-right-register">
+                        <img src="images/f-register/foto REGISTRO.jpg" alt="foto guitarra">
                     </div>
                 </div>
-            </form>
+            </main>
 
-        </div>
-        <div class="card-right-register">
-            <img src="images/f-register/foto REGISTRO.jpg" alt="foto guitarra">
-        </div>
-    </div>
-</main>
+            <%- include('./partials/footer')%>
 
-<%- include('./partials/footer')%>
-
-</body>
+    </body>
 
 </html>
