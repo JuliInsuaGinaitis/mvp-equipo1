@@ -90,20 +90,10 @@ const controlador = {
     },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    logout: function(req, res) {
+        req.session.destroy();
+        res.redirect('/')
+    },
 
 
     contact: (req, res) => {
