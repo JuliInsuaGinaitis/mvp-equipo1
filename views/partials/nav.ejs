@@ -9,6 +9,9 @@
             <p class="m-right navLi"> Hola
                 <%= locals.user %>
             </p>
+            <form action="/logout" method="POST">
+                <button>LOGOUT</button>
+            </form>
             <% } %>
     </ul>
 </div>
