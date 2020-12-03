@@ -4,7 +4,8 @@ var multer = require('multer');
 var path = require('path');
 const controlador = require('../controllers/productosController.js');
 const checkRegister = require('../middlewares/checkregister');
-const checkLogin = require('../middlewares/checkLogin')
+const checkLogin = require('../middlewares/checkLogin');
+const checkAccess = require('../middlewares/checkAccess.js');
     //const {check} = require ('express-validator')//REQUERIMOS  para validar campos de los form//
 
 
@@ -46,13 +47,13 @@ router.get('/productDetail/:id', controlador.detail); //se hace dinamica//
 router.get('/productList', controlador.listadoProductos);
 
 //ruta que muestra la CREACION DE PRODUCTOS + ruta que ENVÍA EL PRODUCTO CREADO///
-router.get('/create', controlador.createproducts) //retorna una vista//
+router.get('/create', checkAccess, controlador.createproducts) //retorna una vista//
 
 router.post('/create', upload.any(), controlador.confirmcreate) //redireccionamiento//
 
 
 //ruta que muestra la EDICIÓN DE PRODUCTOS + ruta que ENVÍA EL PRODUCTO EDITADO//
-router.get('/edit/:id', controlador.editproducts) //retorna una vista//
+router.get('/edit/:id', checkAccess, controlador.editproducts) //retorna una vista//
 
 router.put('/edit/:id', upload.any(), controlador.confirmedit) //redireccionamiento//
 
