@@ -76,7 +76,7 @@ const controlador = {
             return res.render('login', { errors: [{ msg: 'El email es incorrecto' }] })
         } else if (bcryptjs.compareSync(req.body.password, user.password)) {
             //console.log(session)
-            req.session.user = user.email
+            req.session.user = user
             console.log(req.session.user)
 
             return res.redirect('/productList')
