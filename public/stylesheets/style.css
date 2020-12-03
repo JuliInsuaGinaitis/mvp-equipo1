@@ -20,11 +20,6 @@ header {
   margin-bottom: 5px;
 }
 
-.iconHeader {
-  color: white;
-  font-size: 30px;
-}
-
 .topNav {
   align-self: center;
 }
@@ -736,7 +731,7 @@ footer:not(.f-login-register) {
   color: red;
   font-size: x-large;
   font-weight: bold;
-  text-decoration: bold ;
+  text-decoration: bold;
 }
 
 .product-detail {
@@ -1269,8 +1264,8 @@ button {
   display: inline-flexbox;
   padding: 13px;
   background-color: #10325e;
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  color: #ffffff;
+  fill: #ffffff;
   letter-spacing: 2px;
   font-weight: bold;
   border-radius: 30px;
@@ -1280,22 +1275,22 @@ button {
   max-width: 33.333333%;
 }
 
-.product-qty{
-    padding: 12px;
-    width: 100%;
-    font-size: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: #000000;
-    fill: #000000;
-    background-color: #FFFFFF;
+.product-qty {
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  fill: #000000;
+  background-color: #ffffff;
   width: 20%;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
 }
-.banner-contact-container{
+.banner-contact-container {
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -1305,29 +1300,26 @@ button {
   box-sizing: content-box;
 }
 
-.banner-contact{
-
+.banner-contact {
   height: 500px;
-  margin:20px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
   vertical-align: bottom;
-  float:right;
- 
+  float: right;
 }
-.contacto{
-
+.contacto {
   float: letf;
   padding: 25px;
 }
-.contacto-temporal{
-  width:80% ;
-  margin-right: 10% ;
+.contacto-temporal {
+  width: 80%;
+  margin-right: 10%;
   margin-left: 10%;
 }
 
-.textarea{
+.textarea {
   border: 1px solid #dedede;
 }
 .main-Edit {
@@ -1336,4 +1328,14 @@ button {
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
   background-size: cover;
   height: 100%;
+}
+
+/* Font Awesome Icons Styling */
+
+.iconEdit {
+  color: black;
+}
+.iconHeader {
+  color: white;
+  font-size: 30px;
 }
