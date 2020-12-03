@@ -60,6 +60,8 @@ router.put('/edit/:id', upload.any(), controlador.confirmedit) //redireccionamie
 // ruta delete //
 router.delete('/delete/:id', controlador.destroy);
 
+//no le den bola a esto sino no me dejaba cambiar el mensaje del commit.
+
 
 
 
