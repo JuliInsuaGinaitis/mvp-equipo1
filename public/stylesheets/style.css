@@ -505,8 +505,7 @@ footer:not(.f-login-register) {
   display: flex;
   justify-content: center;
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
-  background-size: cover;
-  height: 40em;
+  background-size: cover
 }
 
 #main-login {
@@ -597,6 +596,32 @@ footer:not(.f-login-register) {
   height: 30px;
   background-color: white;
   border: 1px solid #dedede;
+  font-size: 8px;
+  color: gray;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 45px 10px 45px;
+  
+}
+.button-postRegister {
+  width: 35%;
+  height: 30px;
+  background-color: #e30613;
+  border: 1px solid #dedede;
+  font-size: 8px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 45px 10px 45px;
+  margin-bottom: 100px
+}
+
+.button-link {
+  color: gray;
+  text-decoration: none;
+}
+
+.button-text {
   font-size: 8px;
   color: gray;
 }
