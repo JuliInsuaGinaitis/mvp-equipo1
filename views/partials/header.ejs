@@ -2,15 +2,31 @@
     <a href="/" ><img src="/images/f-logo/logo-j-blanco.png" class="logo" /></a>
     <nav class="topNav">
         <ul class="headerShortcuts">
-            <li class="headerLi"><a href="/">Home</a></li>
-            <span class="separatorLines"></span>
-            <li class="headerLi"><a href="/productList">Productos</a></li>
-            <span class="separatorLines"></span>
-            <li class="headerLi"><a href="/register">Registrarse</a></li>
-            <span class="separatorLines"></span>
-            <li class="headerLi"><a href="/login">Mi Cuenta</a></li>
-            <span class="separatorLines"></span>
-            <li class="headerLi"><a href="/contact">Contacto</a></li>
+            <% if (locals.user == undefined ){ %>
+                <li class="headerLi"><a href="/">Home</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/productList">Productos</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/register">Registrarse</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/contact">Contacto</a></li>
+            <% } else if ( locals.user.category == "user" || locals.user.category == undefined){ %>
+                <li class="headerLi"><a href="/">Home</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/productList">Productos</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/login">¡Hola <%= locals.user.name %> !</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/contact">Contacto</a></li>
+            <%  } else if  (locals.user.category === "admin") { %>
+                <li class="headerLi"><a href="/">Home</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/productList">Productos</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/login">¡Hola <%= locals.user.name %> !</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/create">Crear un nuevo producto</a></li>
+            <% }  %>
         </ul>
         </div>
     </nav>
