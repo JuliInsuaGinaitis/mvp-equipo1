@@ -46,13 +46,16 @@ router.get('/productDetail/:id', controlador.detail); //se hace dinamica//
 router.get('/productList', controlador.listadoProductos);
 
 //ruta que muestra la CREACION DE PRODUCTOS + ruta que ENVÍA EL PRODUCTO CREADO///
-router.get('/create', controlador.createproducts) //retorna una vista//
+router.get('/create', controlador.createproducts); //retorna una vista//
 
-router.post('/create', upload.any(), controlador.confirmcreate) //redireccionamiento//
+router.post('/create', upload.any(), controlador.confirmcreate); //redireccionamiento//
 
+// ruta LOGOUT //
+
+router.post('/logout', controlador.logout);
 
 //ruta que muestra la EDICIÓN DE PRODUCTOS + ruta que ENVÍA EL PRODUCTO EDITADO//
-router.get('/edit/:id', controlador.editproducts) //retorna una vista//
+router.get('/edit/:id', controlador.editproducts); //retorna una vista//
 
 router.put('/edit/:id', upload.any(), controlador.confirmedit) //redireccionamiento//
 
