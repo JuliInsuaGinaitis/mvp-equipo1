@@ -7,31 +7,39 @@
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="/register">Registrarse</a></li>
-                <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/contact">Contacto</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="/login">Ingresar</a></li>
             <% } else if ( locals.user.category == "user" || locals.user.category == undefined){ %>
                 <li class="headerLi"><a href="/">Home</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="/login">¡Hola <%= locals.user.name %> !</a></li>
-                <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/contact">Contacto</a></li>
+                <span class="separatorLines"></span>
+                <li class="headerLi"><a href="*">¡Hola <%= locals.user.name %> !</a></li>
             <%  } else if  (locals.user.category === "admin") { %>
                 <li class="headerLi"><a href="/">Home</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="/login">¡Hola <%= locals.user.name %> !</a></li>
+                <li class="headerLi"><a href="*">¡Hola <%= locals.user.name %> !</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/create">Crear un nuevo producto</a></li>
             <% }  %>
         </ul>
         </div>
     </nav>
+    
     <div>
         <input type="text" class="searchBar" placeholder="&#xF002;" style="font-family:Arial, FontAwesome" />
     </div>
+
+
+    <% if (locals.user ) {%>
+        <form action="/logout" method="POST">
+        <button class="salir" ><i class="fas fa-sign-out-alt"> </i>Logout</button>
+        </form>
+    <%} %>
     <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
 </header>
