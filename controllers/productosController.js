@@ -5,6 +5,7 @@ const productsList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const userData = require('../data/user');
+let db= require("../database/models")
 
 
 const controlador = {
@@ -183,7 +184,15 @@ const controlador = {
         //console.log(JSON.stringify(req.params.id))
         console.log('se elimino el producto ', req.params.id) // muestra por consola lo eliminado
         res.redirect('/productList')
-    }
+    },
+    
+    prueba: function (req,res){
+
+        db.Products.findAll().then(function(Product){
+        
+        res.render('prueba', {Product:Product})
+        })
+        },
 
 
 

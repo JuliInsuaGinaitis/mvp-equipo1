@@ -908,5 +908,14 @@
             "/images/products/file-1606962719062.png"
         ],
         "id": 101
+    },
+    {
+        "name": "Pablo Mombiela",
+        "email": "pablomombiela@live.com.ar",
+        "password": "$2a$10$hHodMsblrG4GS1T5RWxZtuNW8C9pzUfPatJj5YYj8dCKqo6Gj7iSm",
+        "confirmPassword": "$2a$05$ty/gfivAtlsPAb/tq9NZQO72x9.V/ngseRtcR2RZz4cc08ucGUrQe",
+        "image": [],
+        "id": 102,
+        "category":"admin"
     }
 ]

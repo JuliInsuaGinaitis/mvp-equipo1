@@ -1,24 +1,24 @@
 <article class="productCard">
   <% if (locals.user == undefined || locals.user.category == "user" || locals.user.category == undefined) {  %>
-    <a href="/productDetail/<%=product.id%>"><img class="productImg"src="<%= product.image %>"></a>
-    <p class="productBrand"><%= product.brand %></p>
-    <p class="productName"><%= product.name %></p>
+    <a href="/productDetail/<%=Product.id%>"><img class="productImg"src="<%= Product.image %>"></a>
+    <p class="productBrand"><%= Product.brand %></p>
+    <p class="productName"><%= Product.name %></p>
     <p class="productCuotas">18 cuotas sin interés de</p>
-    <p class="productPrecio">$<%= product.price %></p>
+    <p class="productPrecio">$<%= Product.price %></p>
     <div class="precioFinalDiv">
     <p style="font-size: 13px">Precio final: </p>
-    <p class="productprecioFinal">$<%= product.finalPrice %></p>
+    <p class="productprecioFinal">$<%= Product.final_price %></p>
     </div>
   <% } else if (locals.user.category === "admin") { %>
-  <a href="/edit/<%=product.id%>"><i class="fas fa-edit iconEdit"></i></a>
-  <a href="/productDetail/<%=product.id%>"><img class="productImg"src="<%= product.image %>"></a>
-  <p class="productBrand"><%= product.brand %></p>
-  <p class="productName"><%= product.name %></p>
+  <a href="/edit/<%=Product.id%>"><i class="fas fa-edit iconEdit"></i></a>
+  <a href="/productDetail/<%=Product.id%>"><img class="productImg"src="<%= Product.image %>"></a>
+  <p class="productBrand"><%= Product.brand %></p>
+  <p class="productName"><%= Product.name %></p>
   <p class="productCuotas">18 cuotas sin interés de</p>
-  <p class="productPrecio">$<%= product.price %></p>
+  <p class="productPrecio">$<%= Product.price %></p>
   <div class="precioFinalDiv">
   <p style="font-size: 13px">Precio final: </p>
-  <p class="productprecioFinal">$<%= product.finalPrice %></p>
+  <p class="productprecioFinal">$<%= Product.final_price %></p>
   </div>
   <% }  %>
   </article>

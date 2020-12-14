@@ -12,7 +12,6 @@ const checkAccess = require('../middlewares/checkAccess.js');
 
 
 
-
 //funcionamiento MULTER//
 
 var storage = multer.diskStorage({
@@ -67,7 +66,7 @@ router.delete('/delete/:id', controlador.destroy);
 
 
 
-
+router.get('/prueba', controlador.prueba);
 
 
 
