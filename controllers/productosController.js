@@ -10,8 +10,14 @@ let db= require("../database/models")
 
 const controlador = {
     listadoProductos: (req, res) => {
+        
 
-        res.render('productList', { productsList: productsList.products }); // listado Productos //
+            db.Products.findAll().then(function(Product){
+            
+            res.render('productList', {Product:Product})
+            })
+            
+       
     },
     index: (req, res) => {
         res.render('index', { productsList: productsList.products }); // Home //
@@ -22,14 +28,13 @@ const controlador = {
     },
 
     detail: (req, res) => {
-        let product = productsList.products.find(function(product) {
-            return req.params.id == product.id;
-
-        })
-        console.log(productsList);
-
-        res.render('productDetail', { product }); // detalle de cada producto//
-    },
+        
+        db.Products.findByPk(req.params.id)
+        .then(function(Product){
+        
+            res.render('DetalleProducto', {Product:Product})
+            })
+             },
 
     register: (req, res) => {
         res.render('register', { data: {} });
@@ -106,93 +111,90 @@ const controlador = {
 
         res.render('createProducts');
     },
-    confirmcreate: (req, res, next) => {
-        // Guardo el nombre de la imagen
-
-
-        var filename = req.files.map(function(file) {
-            return "/images/products/" + file.filename.toString();
-        });
-
-
-        productsList.products.push({
-            id: productsList.products[productsList.products.length - 1].id + 1,
-            image: filename,
-            ...req.body
-        });
-
-
-        productsJSON = JSON.stringify(productsList);
-
-        fs.writeFileSync(productsFilePath, productsJSON); // Escribe en el json?? //
-
-
-        console.log(req.body)
-
-        res.redirect('/productList')
+    confirmcreate: (req, res) => {
+        
+        db.Products.create({
+            brand:req.body.brand,
+            name:req.body.name,
+            description:req.body.description,
+            image:req.body.image,
+            price:req.body.price,
+            final_price: req.body.final_price
+            
+        })
+        .then(resultado =>{
+            res.render('sucessProducts')
+        })
+        .catch(error =>{
+            res.send(error)
+        })
+        
+      
     },
 
 
     editproducts: (req, res) => {
-        res.render('editProducts', { productsList: productsList, id: req.params.id - 1 });
+       
+    db.Products.findByPk(req.params.id)
+    .then(function(product){
+        res.render('editProducts', {product})
+    })
+    
     },
     confirmedit: (req, res) => {
+db.Products.update({
+    brand:req.body.brand,
+    name:req.body.name,
+    description:req.body.description,
+    image:req.body.image,
+    price:req.body.price,
+    final_price: req.body.final_price
+},{
+where: {
+    id:req.params.id
+}
+}).then(function(resultado){
+    res.redirect('/productList');
+}).catch(function(error){
+    console.log(error)
+    res.send("Error")
+})
 
 
-        var filename = req.files.map(function(file) {
-            return "/images/products/" + file.filename.toString();
-        });
-        // recupero los datos del form//
-        productsList.products.forEach(function(product) {
-            if (product.id == req.params.id) {
-                //console.log(product)
-                product.brand = req.body.brand;
-                product.name = req.body.name;
-                product.price = req.body.price;
-                product.discount = req.body.discount;
-                product.mainCategory = req.body.mainCategory;
-                product.subCategory = req.body.subCategory;
-                product.description = req.body.description;
-                product.image = filename;
-            }
-        });
-        // los empaqueto en un JSON
-        productsJSON = JSON.stringify(productsList);
 
 
-        // Escribimos nuevamente el archivo productsDataBase.json
-        fs.writeFileSync(productsFilePath, productsJSON);
-
-        //console.log(req.body)
-        res.redirect('/productList');
+       
 
 
-    },
-    //NO HAY BOTON DELETE!!!!!//
-    destroy: (req, res) => {
-        // Aca buscamos y borramos//
-        let afterDelete = productsList.products.filter(function(product) {
-            return product.id != req.params.id;
-        })
-
-        let producto = { products: afterDelete }
-            // los empaqueto en json
-        productsJSON = JSON.stringify(producto);
-
-
-        fs.writeFileSync(productsFilePath, productsJSON);
-        //console.log(JSON.stringify(req.params.id))
-        console.log('se elimino el producto ', req.params.id) // muestra por consola lo eliminado
-        res.redirect('/productList')
     },
     
-    prueba: function (req,res){
-
-        db.Products.findAll().then(function(Product){
+    destroy: (req, res) => {
         
-        res.render('prueba', {Product:Product})
+        db.Products.destroy({
+            where:{
+id:req.params.id
+            }
         })
-        },
+        .then(function(resultado){
+            res.redirect('/productList')
+        })
+        .catch(function(error){
+             console.log(error)
+    res.send("Error")
+        })
+        
+        
+        
+       
+    },
+    
+    prueba: function (req, res) {
+
+        db.Products.findAll().then(function (Product) {
+
+            res.render('prueba', { Product: Product })
+        })
+    },
 
 
 
