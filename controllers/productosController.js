@@ -41,23 +41,21 @@ const controlador = {
     },
     createUser: (req, res) => {
 
-        var filename = req.files.map(function(file) {
-            return "/images/products/" + file.filename.toString();
-        });
+        //var filename = req.files.map(function(file) {
+          //  return "/images/products/" + file.filename.toString();
+        //});
 
-        let errors = validationResult(req)
-        if (!errors.isEmpty()) {
+        //let errors = validationResult(req)
+        //if (!errors.isEmpty()) {
 
-            return res.render('register', { errors: errors.errors, data: req.body })
-        }
-
-
-        userData.create({
+          //  return res.render('register', { errors: errors.errors, data: req.body })
+        
+        //}
+db.Users.create({
             name: req.body.name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            confirmPassword: bcryptjs.hashSync(req.body.confirmPassword, 5),
-            image: filename
+            file:  "/images/users/" + req.files[0].filename
 
         })
         res.render('createUser');
@@ -77,20 +75,34 @@ const controlador = {
             return res.render('login', { errors: errors.errors, data: req.body })
         }
 
-        let user = userData.findByEmail(req.body.email)
-        if (!user) {
-            return res.render('login', { errors: [{ msg: 'El email es incorrecto' }] })
-        } else if (bcryptjs.compareSync(req.body.password, user.password)) {
-            //console.log(session)
-            req.session.user = user
-            console.log(req.session.user)
+       let user = db.Users.findOne({
+             where:{
+                 email: req.body.email
+           
+                }
+               
+         }).then(function(user){
+            //console.log(resultado)
 
-            return res.redirect('/productList')
+            if (!user) {
+                return res.render('login', { errors: [{ msg: 'El email es incorrecto' }] })
+            } else if (bcryptjs.compareSync(req.body.password, user.password)) {
+                //console.log(session)
+                req.session.user = user
+                console.log(req.session.user)
+    
+                return res.redirect('/productList')
+    
+            } else {
+                return res.render('login', { errors: [{ msg: 'La contraseña es incorrecta' }] })
+            }
+    
 
-        } else {
-            return res.render('login', { errors: [{ msg: 'La contraseña es incorrecta' }] })
-        }
-
+}) .catch(error =>{
+            console.log(error)
+            res.send('error ')
+        })
+        
 
 
     },
@@ -113,20 +125,25 @@ const controlador = {
     },
     confirmcreate: (req, res) => {
         
+         
+    
+       
         db.Products.create({
             brand:req.body.brand,
             name:req.body.name,
             description:req.body.description,
-            image:req.body.image,
+            image: "/images/products/" + req.files[0].filename,
             price:req.body.price,
             final_price: req.body.final_price
             
         })
         .then(resultado =>{
+         // console.log(req.files[0].filename)
             res.render('sucessProducts')
         })
         .catch(error =>{
-            res.send(error)
+            console.log(error)
+            res.send('error')
         })
         
       
@@ -187,18 +204,36 @@ id:req.params.id
         
        
     },
-    
-    prueba: function (req, res) {
 
-        db.Products.findAll().then(function (Product) {
-
-            res.render('prueba', { Product: Product })
+   // VISTA Y MODIFICACION DE PERFIL //
+    editprofile: (req, res) => {
+       
+        db.Users.findByPk(req.params.id)
+        .then(function(user){
+            res.render('editProfile', {user})
         })
-    },
-
-
-
-
+        
+        },
+        updateprofile: (req, res) => {
+            db.Users.update({
+                
+                name:req.body.name,
+                email:req.body.email,
+                file:req.body.image,
+                
+            },{
+            where: {
+                id:req.params.id
+            }
+            }).then(function(resultado){
+                res.redirect('/productList');
+            }).catch(function(error){
+                console.log(error)
+                res.send("Error")
+            })
+        }, 
+    
+   
 };
 
 module.exports = controlador;

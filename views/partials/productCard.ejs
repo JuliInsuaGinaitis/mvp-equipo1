@@ -1,5 +1,5 @@
 <article class="productCard">
-  <% if (locals.user == undefined || locals.user.category == "user" || locals.user.category == undefined) {  %>
+  <% if (locals.user == undefined || locals.user.category_id == 1 || locals.user.category_id == undefined) {  %>
     <a href="/productDetail/<%=Product.id%>"><img class="productImg"src="<%= Product.image %>"></a>
     <p class="productBrand"><%= Product.brand %></p>
     <p class="productName"><%= Product.name %></p>
@@ -9,7 +9,7 @@
     <p style="font-size: 13px">Precio final: </p>
     <p class="productprecioFinal">$<%= Product.final_price %></p>
     </div>
-  <% } else if (locals.user.category === "admin") { %>
+  <% } else if (locals.user.category_id == 2) { %>
   <a href="/edit/<%=Product.id%>"><i class="fas fa-edit iconEdit"></i></a>
   <a href="/productDetail/<%=Product.id%>"><img class="productImg"src="<%= Product.image %>"></a>
   <p class="productBrand"><%= Product.brand %></p>

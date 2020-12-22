@@ -10,20 +10,20 @@
                 <li class="headerLi"><a href="/contact">Contacto</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/login">Ingresar</a></li>
-            <% } else if ( locals.user.category == "user" || locals.user.category == undefined){ %>
+            <% } else if ( locals.user.category_id == 1|| locals.user.category_id == undefined){ %>
                 <li class="headerLi"><a href="/">Home</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/contact">Contacto</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="*">¡Hola <%= locals.user.name %> !</a></li>
-            <%  } else if  (locals.user.category === "admin") { %>
+                <li class="headerLi"><a href="/profile/<%= user.id %>">¡Hola <%= locals.user.name %> !</a></li>
+            <%  } else if  (locals.user.category_id == 2) { %>
                 <li class="headerLi"><a href="/">Home</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="*">¡Hola <%= locals.user.name %> !</a></li>
+                <li class="headerLi"><a href="profile/<%= user.id %>">¡Hola <%= locals.user.name %> !</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/create">Crear un nuevo producto</a></li>
             <% }  %>

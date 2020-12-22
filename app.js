@@ -25,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method')); //para PUT y DELETE//
 app.use(function(req, res, next) { // Midlleweare a nivel aplicación para saludo de SESSION //
+    console.log(req.session.user)
     if (req.session.user != undefined) {
         res.locals.user = req.session.user
     }

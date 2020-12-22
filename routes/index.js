@@ -64,13 +64,14 @@ router.delete('/delete/:id', controlador.destroy);
 
 //no le den bola a esto sino no me dejaba cambiar el mensaje del commit.
 
+// ruta PROFILE
+
+router.get('/profile/:id', controlador.editprofile);// retorna vista //
+router.put('/profile/:id', controlador.updateprofile); // redirecciona//
 
 
-router.get('/prueba', controlador.prueba);
 
 
 
 
-
-
-module.exports = router;
+module.exports = router
