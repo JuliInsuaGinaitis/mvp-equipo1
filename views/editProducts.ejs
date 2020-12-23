@@ -41,13 +41,13 @@
 
             <main class="main-Edit" ,>
 
-                <div class="card-login">
-                    <div class="card-left-login">
-                        <div class="card-logo">
+                <div class="card-edit">
+                    <div class="card-left-edit">
+                        <div class="card-logo-edit">
                             <img src="/images/f-logo/logo-j-color.png" alt="logo">
                         </div>
                         <div class="card-title-login">
-                            <h1>Bienvenido/a admin</h1>
+                            <h2>Bienvenido/a admin</h2>
                         </div>
 
                         <div class="card-parrafo-login">
@@ -57,37 +57,38 @@
                             <div class="all-inputs">
 
 
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="">Marca</label>
                                     <input type="text" name="brand" value="<%=product.brand_id%>">
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="">Nombre del Producto</label>
                                     <input type="text" name="name" value="<%=product.name%>">
                                 </div>
 
-                                <div class="form-field">
+                                <div class="form-field-edit-desc">
                                     <label for="">Descripción</label><br>
-                                    <textarea class="textarea" rows="8" cols="54" name="description" value=>"<%=product.description%>"</textarea>
+                                    <textarea class="textarea-desc" rows="6" cols="103" name="description" value=>"<%=product.description%>"</textarea>
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="">Imagen</label>
                                     <input type="file" name="image" placeholder="Imagen">
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="">Categoria</label>
                                     <input type="text" name="mainCategory" value="<%=product.mainCategory%>">
                                 </div>
-                                <div class="form-field">
+                               
+                               <!-- <div class="form-field-edit">
                                     <label for="">Subcategoria</label>
                                     <input type="text" name="subCategory" value="<%=product.subCategory%>">
-                                </div>
+                                </div> -->
                                 
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="">Precio</label>
                                     <input type="text" name="price" value="<%=product.price%>">
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="">Precio Final</label>
                                     <input type="text" name="finalprice" value="<%=product.final_price%>">
                                 </div>
@@ -102,6 +103,9 @@
                         
                                 <div class="form-button">
                                     <input type="submit" class="button-login" value="Actualizar">
+                                    <form action="/delete/<%=product.id%>?_method=DELETE" method="POST">
+                                        <input type="submit" class="button-signup" value="Borrar Producto">
+                                    </form>
 
                                 </div>
                             </div>
@@ -109,9 +113,7 @@
 
                         <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
                        <div>
-                            <form action="/delete/<%=product.id%>?_method=DELETE" method="POST">
-                                <input type="submit" class="button-signup" value="Borrar Producto">
-                            </form>
+                            
                         </div>
                         <!--<div class="card-left-footer">
                             <p>Log in with</p>

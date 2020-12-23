@@ -438,10 +438,11 @@ footer:not(.f-login-register) {
 
 .form-field input {
   padding-left: 2px;
-  width: 92%;
+  width: 85%;
   height: 35px;
   font-size: 12px;
   border: 1px solid #dedede;
+  margin-bottom: 5px;
 }
 
 .form-button {
@@ -1091,11 +1092,12 @@ button {
 .sidebarAlignment {
   display: flex;
   flex-direction: row;
-}
+ }
 
 .pageBody {
   display: flex;
   flex-direction: column;
+  width:90%
 }
 
 .productListSubHeader {
@@ -1151,12 +1153,13 @@ button {
 
 .sidebar {
   display: flex;
-  width: 290px;
+  width: 15%;
   flex-direction: column;
   padding-right: 20px;
   padding-left: 20px;
   height: 600px;
   justify-content: space-around;
+  padding-top: 80px;
 }
 
 .sidebarCategory {
@@ -1165,12 +1168,15 @@ button {
 }
 
 .sidebarCategoryTitle {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .sidebarItem {
-  font-size: 12px;
+  font-size: 14px;
+  padding-bottom: 5px;
 }
 
 .sidebarCheckbox {
@@ -1222,25 +1228,30 @@ button {
 .productImg {
   width: 300px;
   height: 300px;
+  padding: 25px;
 }
 
 .productBrand {
   font-weight: bold;
   font-size: 18px;
+  padding-bottom: 4px;
 }
 
 .productName {
   font-weight: 500;
+  padding-bottom: 4px;
 }
 
 .productCuotas {
   font-size: 11px;
   font-weight: 500;
+  padding-bottom: 4px;
 }
 
 .productPrecio {
   font-weight: 900;
   font-size: 18px;
+  padding-bottom: 4px;
 }
 
 .productPrecioFinalDiv {
@@ -1372,4 +1383,48 @@ button {
   font-weight: 300;
   background-color: #1a192d;
   border: transparent;
+}
+.card-edit {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.card-left-edit {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-left: 4%;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-logo-edit img {
+  width: 15%;
+  padding-bottom:30px
+}
+.form-field-edit input {
+  padding-left: 2px;
+  width: 70%;
+  float: right;
+  height: 35px;
+  font-size: 12px;
+  border: 1px solid #dedede;
+  margin-right: 40px;
+  margin-bottom: 7px;
+}
+.form-field-edit {
+  height: 50px;
+  padding-top: 15px;
+}
+.form-field-edit-desc {
+  height: 150px;
+  padding-top: 15px;
+}
+.textarea-desc {
+  float: right;
+  margin-right: 40px;
 }

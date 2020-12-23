@@ -139,7 +139,7 @@ db.Users.create({
         })
         .then(resultado =>{
          // console.log(req.files[0].filename)
-            res.render('sucessProducts')
+            res.redirect('/productList') 
         })
         .catch(error =>{
             console.log(error)
