@@ -500,7 +500,7 @@ footer:not(.f-login-register) {
   display: flex;
   justify-content: center;
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
-  background-size: cover
+  background-size: cover;
 }
 
 #main-login {
@@ -596,7 +596,6 @@ footer:not(.f-login-register) {
   text-decoration: none;
   text-align: center;
   padding: 10px 45px 10px 45px;
-  
 }
 .button-postRegister {
   width: 35%;
@@ -608,7 +607,7 @@ footer:not(.f-login-register) {
   text-decoration: none;
   text-align: center;
   padding: 10px 45px 10px 45px;
-  margin-bottom: 100px
+  margin-bottom: 100px;
 }
 
 .button-link {
@@ -1372,4 +1371,105 @@ button {
   font-weight: 300;
   background-color: #1a192d;
   border: transparent;
+}
+
+/* Profile */
+
+.mainProfileC {
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.profileLeft {
+  padding-left: 50px;
+}
+.profileRight {
+  margin-left: 300px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  border-radius: 3%;
+  height: 600px;
+  width: 900px;
+  align-self: center;
+}
+.profileImage {
+  width: 100px;
+  height: 100px;
+}
+.profileDetailContainer {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.profileField {
+  height: 50px;
+  width: 700px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 2px;
+}
+#background-image {
+  display: flex;
+  justify-content: center;
+  background-image: url(/images/f-register/fondo\ REGISTRO.jpg);
+  background-size: cover;
+}
+.profileImageButton {
+  width: 35%;
+  height: 30px;
+  background-color: #e30613;
+  font-size: 8px;
+  color: white;
+  border: none;
+  margin-right: 3px;
+  align-self: center;
+}
+.profileImageButton::before {
+  width: 35%;
+  height: 30px;
+  background-color: #e30613;
+  font-size: 8px;
+  color: white;
+  border: none;
+  margin-right: 3px;
+  text-align: center;
+  align-items: center;
+}
+.profileImageButton:hover {
+  width: 35%;
+  height: 30px;
+  background-color: #a00610;
+  font-size: 8px;
+  color: white;
+  border: none;
+  margin-right: 3px;
+  text-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  content: "Cambiá tu foto de perfil";
+  display: inline-block;
+  white-space: nowrap;
+}
+.profileImageButton::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.profileSubmit {
+  width: 35%;
+  height: 30px;
+  background-color: #e30613;
+  font-size: 8px;
+  color: white;
+  border: none;
+  margin-right: 3px;
+}
+.profileSubmit:hover {
+  width: 35%;
+  height: 30px;
+  background-color: #a00610;
+  font-size: 8px;
+  color: white;
+  border: none;
+  margin-right: 3px;
 }
