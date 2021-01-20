@@ -55,7 +55,7 @@ db.Users.create({
             name: req.body.name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            file:  "/images/users/" + req.files[0].filename
+            file:  "/images/products/" + req.files[0].filename
 
         })
         res.render('createUser');

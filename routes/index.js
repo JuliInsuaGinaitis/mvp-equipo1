@@ -67,7 +67,7 @@ router.delete('/delete/:id', controlador.destroy);
 // ruta PROFILE
 
 router.get('/profile/:id', controlador.editprofile);// retorna vista //
-router.put('/profile/:id', controlador.updateprofile); // redirecciona//
+router.put('/profile/:id', upload.any(), controlador.updateprofile); // redirecciona//
 
 
 
