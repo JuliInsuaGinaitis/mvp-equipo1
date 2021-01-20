@@ -436,19 +436,84 @@ footer:not(.f-login-register) {
   color: grey;
 }
 
+.form-field {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
 .form-field input {
   padding-left: 2px;
-  width: 92%;
+  width: 85%;
   height: 35px;
   font-size: 12px;
   border: 1px solid #dedede;
+  margin-bottom: 5px;
+  position: relative;
+}
+.form-field input:focus {
+  outline: 0;
+  padding-left: 2px;
+  width: 85%;
+  height: 35px;
+  font-size: 12px;
+  border: 1px solid #777;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-field.success input {
+  border-color: #2ecc71;
+  padding-left: 2px;
+  width: 85%;
+  height: 35px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-field.error input {
+  border-color: #e74c3c;
+  padding-left: 2px;
+  width: 85%;
+  height: 35px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-field i {
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+.form-field.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-field.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+.form-field small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-field.error small {
+  visibility: visible;
 }
 
 .form-button {
   margin-top: 20px;
   margin-bottom: 15px;
 }
-
 .button-createuser {
   width: 35%;
   height: 30px;
@@ -544,14 +609,6 @@ footer:not(.f-login-register) {
   color: grey;
   margin-top: 5px;
   margin-bottom: 15px;
-}
-
-.form-field input {
-  padding-left: 2px;
-  width: 92%;
-  height: 35px;
-  font-size: 12px;
-  border: 1px solid #dedede;
 }
 
 .check-recover {
@@ -1095,6 +1152,7 @@ button {
 .pageBody {
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .productListSubHeader {
@@ -1150,12 +1208,13 @@ button {
 
 .sidebar {
   display: flex;
-  width: 290px;
+  width: 15%;
   flex-direction: column;
   padding-right: 20px;
   padding-left: 20px;
   height: 600px;
   justify-content: space-around;
+  padding-top: 80px;
 }
 
 .sidebarCategory {
@@ -1164,12 +1223,15 @@ button {
 }
 
 .sidebarCategoryTitle {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .sidebarItem {
-  font-size: 12px;
+  font-size: 14px;
+  padding-bottom: 5px;
 }
 
 .sidebarCheckbox {
@@ -1221,25 +1283,30 @@ button {
 .productImg {
   width: 300px;
   height: 300px;
+  padding: 25px;
 }
 
 .productBrand {
   font-weight: bold;
   font-size: 18px;
+  padding-bottom: 4px;
 }
 
 .productName {
   font-weight: 500;
+  padding-bottom: 4px;
 }
 
 .productCuotas {
   font-size: 11px;
   font-weight: 500;
+  padding-bottom: 4px;
 }
 
 .productPrecio {
   font-weight: 900;
   font-size: 18px;
+  padding-bottom: 4px;
 }
 
 .productPrecioFinalDiv {
@@ -1372,104 +1439,47 @@ button {
   background-color: #1a192d;
   border: transparent;
 }
-
-/* Profile */
-
-.mainProfileC {
-  padding: 100px;
+.card-edit {
+  width: 70%;
+  height: auto;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
-.profileLeft {
-  padding-left: 50px;
+.card-left-edit {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-left: 4%;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.profileRight {
-  margin-left: 300px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 2px;
-  border-radius: 3%;
-  height: 600px;
-  width: 900px;
-  align-self: center;
+.card-logo-edit img {
+  width: 15%;
+  padding-bottom: 30px;
 }
-.profileImage {
-  width: 100px;
-  height: 100px;
+.form-field-edit input {
+  padding-left: 2px;
+  width: 70%;
+  float: right;
+  height: 35px;
+  font-size: 12px;
+  border: 1px solid #dedede;
+  margin-right: 40px;
+  margin-bottom: 7px;
 }
-.profileDetailContainer {
-  margin-left: 30px;
-  margin-top: 30px;
-}
-.profileField {
+.form-field-edit {
   height: 50px;
-  width: 700px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-style: solid;
-  border-color: grey;
-  border-width: 2px;
+  padding-top: 15px;
 }
-#background-image {
-  display: flex;
-  justify-content: center;
-  background-image: url(/images/f-register/fondo\ REGISTRO.jpg);
-  background-size: cover;
+.form-field-edit-desc {
+  height: 150px;
+  padding-top: 15px;
 }
-.profileImageButton {
-  width: 35%;
-  height: 30px;
-  background-color: #e30613;
-  font-size: 8px;
-  color: white;
-  border: none;
-  margin-right: 3px;
-  align-self: center;
-}
-.profileImageButton::before {
-  width: 35%;
-  height: 30px;
-  background-color: #e30613;
-  font-size: 8px;
-  color: white;
-  border: none;
-  margin-right: 3px;
-  text-align: center;
-  align-items: center;
-}
-.profileImageButton:hover {
-  width: 35%;
-  height: 30px;
-  background-color: #a00610;
-  font-size: 8px;
-  color: white;
-  border: none;
-  margin-right: 3px;
-  text-align: center;
-  align-items: center;
-  -webkit-user-select: none;
-  content: "Cambiá tu foto de perfil";
-  display: inline-block;
-  white-space: nowrap;
-}
-.profileImageButton::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.profileSubmit {
-  width: 35%;
-  height: 30px;
-  background-color: #e30613;
-  font-size: 8px;
-  color: white;
-  border: none;
-  margin-right: 3px;
-}
-.profileSubmit:hover {
-  width: 35%;
-  height: 30px;
-  background-color: #a00610;
-  font-size: 8px;
-  color: white;
-  border: none;
-  margin-right: 3px;
+.textarea-desc {
+  float: right;
+  margin-right: 40px;
 }
