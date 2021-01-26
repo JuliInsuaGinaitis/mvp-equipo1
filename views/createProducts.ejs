@@ -28,6 +28,8 @@
             <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
         </header>-->
 
+
+        
         
 
             <main class="mainCreate-Edit">
@@ -44,6 +46,95 @@
                         <div class="card-parrafo-login">
                             <p>Carga tus nuevos productos llenando estos campos:</p>
                         </div>
+
+                        <script>
+                            const form = document.getElementById('form');
+                            const brand = document.getElementById('brand');
+                            const name = document.getElementById('name');
+                            const description = document.getElementById('description');
+                            const file = document.getElementById('file');
+                            const mainCategory = document.getElementById('mainCategory');
+                            const price = document.getElementById('price');
+                            const finalprice = document.getElementById('finalprice');
+                
+                            function checkInputs() {
+                                const brandValue = brand.value.trim();
+                                const nameValue = name.value.trim();
+                                const descriptionValue = description.value.trim();
+                                const fileValue = file.value.trim();
+                                const mainCategoryValue = mainCategory.value.trim();
+                                const priceValue = price.value.trim();
+                                const finalpriceValue = finalprice.value.trim();
+                                
+                                if(brandValue === '') {
+                                    setErrorFor(brand, 'Necesitamos la marca del producto');
+                                } else {
+                                    setSuccessFor(brand);
+                                }
+                                
+                                if(nameValue === '' || nameValue.length() < 5) {
+                                    setErrorFor(name, 'Necesitamos el nombre del producto');
+                                } else {
+                                    setSuccessFor(name);
+                                }
+                
+                                if(descriptionValue === '' || nameValue.length() < 5) {
+                                    setErrorFor(description, 'Necesitamos la descripción del producto');
+                                } else {
+                                    setSuccessFor(description);
+                                }
+                
+                                if (!isFile(fileValue)) {
+                                            setErrorFor(file, 'Archivo inválido'); 
+                                } else {
+                                    setSuccessFor(file)
+                                }
+                
+                                if(mainCategoryValue === '') {
+                                    setErrorFor(mainCategory, 'Necesitamos la categoría del producto');
+                                } else {
+                                    setSuccessFor(mainCategory);
+                                }
+                
+                                if(priceValue === '') {
+                                    setErrorFor(price, 'Necesitamos el precio parcial del producto');
+                                } else {
+                                    setSuccessFor(price);
+                                }
+                
+                                if(finalpriceValue === '') {
+                                    setErrorFor(finalprice, 'Necesitamos el precio del producto');
+                                } else {
+                                    setSuccessFor(finalprice);
+                                }
+                                
+                            }
+                
+                
+                
+                            form.addEventListener('submit', e => {
+                                e.preventDefault();
+                                
+                                checkInputs();
+                            });
+                
+                            function setErrorFor(input, message) {
+                                const formControl = input.parentElement;
+                                const small = formControl.querySelector('small');
+                                formControl.className = 'form-field error';
+                                small.innerText = message;
+                            }
+                
+                            function setSuccessFor(input) {
+                                const formControl = input.parentElement;
+                                formControl.className = 'form-field success';
+                            }
+                                
+                            function isFile() {
+                            var file = document.querySelector("#file");
+                            if ( /\.(jpe?g|png|gif)$/i.test(file.files[0].name) === false ) { alert("not an image!"); }
+                            }
+                        </script>
                         <form action="/create" enctype="multipart/form-data" method="POST" class="card-form" id="form">
                             <div class="all-inputs">
 
@@ -120,94 +211,7 @@
                             </div>
                         </form>
 
-                        <script>
-                            const form = document.getElementById('form');
-                            const brand = document.getElementById('brand');
-                            const name = document.getElementById('name');
-                            const description = document.getElementById('description');
-                            const file = document.getElementById('file');
-                            const mainCategory = document.getElementById('mainCategory');
-                            const price = document.getElementById('price');
-                            const finalprice = document.getElementById('finalprice');
-
-                            function checkInputs() {
-                                const brandValue = brand.value.trim();
-                                const nameValue = name.value.trim();
-                                const descriptionValue = description.value.trim();
-                                const fileValue = file.value.trim();
-                                const mainCategoryValue = mainCategory.value.trim();
-                                const priceValue = price.value.trim();
-                                const finalpriceValue = finalprice.value.trim();
-                                
-                                if(brandValue === '') {
-                                    setErrorFor(brand, 'Necesitamos la marca del producto');
-                                } else {
-                                    setSuccessFor(brand);
-                                }
-                                
-                                if(nameValue === '' || nameValue.length() < 5) {
-                                    setErrorFor(name, 'Necesitamos el nombre del producto');
-                                } else {
-                                    setSuccessFor(name);
-                                }
-
-                                if(descriptionValue === '' || nameValue.length() < 5) {
-                                    setErrorFor(description, 'Necesitamos la descripción del producto');
-                                } else {
-                                    setSuccessFor(description);
-                                }
-
-                                if (!isFile(fileValue)) {
-                                            setErrorFor(file, 'Archivo inválido'); 
-                                } else {
-                                    setSuccessFor(file)
-                                }
-
-                                if(mainCategoryValue === '') {
-                                    setErrorFor(mainCategory, 'Necesitamos la categoría del producto');
-                                } else {
-                                    setSuccessFor(mainCategory);
-                                }
-
-                                if(priceValue === '') {
-                                    setErrorFor(price, 'Necesitamos el precio parcial del producto');
-                                } else {
-                                    setSuccessFor(price);
-                                }
-
-                                if(finalpriceValue === '') {
-                                    setErrorFor(finalprice, 'Necesitamos el precio del producto');
-                                } else {
-                                    setSuccessFor(finalprice);
-                                }
-                                
-                            }
-
-
-
-                            form.addEventListener('submit', e => {
-                                e.preventDefault();
-                                
-                                checkInputs();
-                            });
-
-                            function setErrorFor(input, message) {
-                                const formControl = input.parentElement;
-                                const small = formControl.querySelector('small');
-                                formControl.className = 'form-field error';
-                                small.innerText = message;
-                            }
-
-                            function setSuccessFor(input) {
-                                const formControl = input.parentElement;
-                                formControl.className = 'form-field success';
-                            }
-                                
-                            function isFile() {
-                            var file = document.querySelector("#file");
-                            if ( /\.(jpe?g|png|gif)$/i.test(file.files[0].name) === false ) { alert("not an image!"); }
-                            }
-                        </script>
+                        
 
                         <!--<div class="card-left-footer">
                             <p>Log in with</p>

@@ -30,6 +30,63 @@
                                     <% }) %>
                             </ul>
                             <% } %>
+                            <script>
+                                const form = document.getElementById('form');
+                                const name = document.getElementById('name');
+                                const email = document.getElementById('email');
+                                const password = document.getElementById('password');
+
+                                function checkInputs() {
+                                    const nameValue = name.value.trim();
+                                    const emailValue = email.value.trim();
+                                    const passwordValue = password.value.trim();
+                                    
+                                    if(nameValue === '' || nameValue.length < 2) {
+                                        setErrorFor(name, 'Necesitamos tu nombre');
+                                    } else {
+                                        setSuccessFor(ame);
+                                    }
+                                    
+                                    if(emailValue === '') {
+                                        setErrorFor(email, 'Necesitamos tu email');
+                                    } else if (!isEmail(emailValue)) {
+                                        setErrorFor(email, 'Email inválido');
+                                    } else {
+                                        setSuccessFor(email);
+                                    }
+                                    
+                                    if(passwordValue === '' || passwordValue.length < 8) {
+                                        setErrorFor(password, 'Tu contraseña debe tener al menos 8 caracteres.');
+                                    } else {
+                                        setSuccessFor(password);
+                                    }
+                                    
+                                }
+
+
+
+                                form.addEventListener('submit', e => {
+                                    e.preventDefault();
+                                    
+                                    checkInputs();
+                                });
+
+                                function setErrorFor(input, message) {
+                                    const formControl = input.parentElement;
+                                    const small = formControl.querySelector('small');
+                                    formControl.className = 'form-field error';
+                                    small.innerText = message;
+                                }
+
+                                function setSuccessFor(input) {
+                                    const formControl = input.parentElement;
+                                    formControl.className = 'form-field success';
+                                }
+                                    
+                                function isEmail(email) {
+                                    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+                                }
+                            </script>
                                 <form action="/register" method="POST" class="card-form" enctype="multipart/form-data" id="form">
                                     <div class="all-inputs">
 
@@ -73,65 +130,6 @@
                                         </div>
                                     </div>
                                 </form>
-
-                                <script>
-                                    const form = document.getElementById('form');
-                                    const name = document.getElementById('name');
-                                    const email = document.getElementById('email');
-                                    const password = document.getElementById('password');
-
-                                    function checkInputs() {
-                                        // trim to remove the whitespaces
-                                        const nameValue = name.value.trim();
-                                        const emailValue = email.value.trim();
-                                        const passwordValue = password.value.trim();
-                                        
-                                        if(nameValue === '' || nameValue.length() < 2) {
-                                            setErrorFor(name, 'Necesitamos tu nombre');
-                                        } else {
-                                            setSuccessFor(ame);
-                                        }
-                                        
-                                        if(emailValue === '') {
-                                            setErrorFor(email, 'Necesitamos tu email');
-                                        } else if (!isEmail(emailValue)) {
-                                            setErrorFor(email, 'Email inválido');
-                                        } else {
-                                            setSuccessFor(email);
-                                        }
-                                        
-                                        if(passwordValue === '' || passwordValue.length() < 8) {
-                                            setErrorFor(password, 'Tu contraseña debe tener al menos 8 caracteres.');
-                                        } else {
-                                            setSuccessFor(password);
-                                        }
-                                        
-                                    }
-
-
-
-                                    form.addEventListener('submit', e => {
-                                        e.preventDefault();
-                                        
-                                        checkInputs();
-                                    });
-
-                                    function setErrorFor(input, message) {
-                                        const formControl = input.parentElement;
-                                        const small = formControl.querySelector('small');
-                                        formControl.className = 'form-field error';
-                                        small.innerText = message;
-                                    }
-
-                                    function setSuccessFor(input) {
-                                        const formControl = input.parentElement;
-                                        formControl.className = 'form-field success';
-                                    }
-                                        
-                                    function isEmail(email) {
-                                        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-                                    }
-                                </script>
 
                     </div>
                     <div class="card-right-register">
