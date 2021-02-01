@@ -6,6 +6,8 @@ var logger = require('morgan');
 const methodOverride = require('method-override'); //para PUT y DELETE//
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var apiUsersRouter = require ('./routes/api/users')
+var apiProductsRouter = require ('./routes/api/products')
 var app = express();
 var session = require('express-session');
 
@@ -33,6 +35,9 @@ app.use(function(req, res, next) { // Midlleweare a nivel aplicación para salud
 });
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api/users', apiUsersRouter);
+app.use('/api/products', apiProductsRouter);
+
 
 
 // catch 404 and forward to error handler
