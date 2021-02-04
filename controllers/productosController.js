@@ -39,7 +39,7 @@ const controlador = {
     register: (req, res) => {
         res.render('register', { data: {} });
     },
-    createUser: (req, res) => {
+    createUser: (req, res, next) => {
 
         //var filename = req.files.map(function(file) {
           //  return "/images/products/" + file.filename.toString();
@@ -55,7 +55,7 @@ db.Users.create({
             name: req.body.name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            file:  "/images/products/" + req.files[0].filename
+            file:  "/images/users/" + req.files[0].filename
 
         })
         res.render('createUser');

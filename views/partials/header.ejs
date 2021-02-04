@@ -17,13 +17,13 @@
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/contact">Contacto</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="/profile/<%= user.id %>">¡Hola <%= locals.user.name %> !</a></li>
+                <li class="headerLi"><a href="/profile/<%= user.id %>">¡Hola <%= locals.user.name %>!</a></li>
             <%  } else if  (locals.user.category_id == 2) { %>
                 <li class="headerLi"><a href="/">Home</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="profile/<%= user.id %>">¡Hola <%= locals.user.name %> !</a></li>
+                <li class="headerLi"><a href="profile/<%= user.id %>">¡Hola <%= locals.user.name %>!</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/create">Crear un nuevo producto</a></li>
             <% }  %>

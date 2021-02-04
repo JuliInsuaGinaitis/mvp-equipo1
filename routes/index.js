@@ -12,7 +12,7 @@ const checkAccess = require('../middlewares/checkAccess.js');
 
 
 
-//funcionamiento MULTER//
+//funcionamiento MULTER image Products//
 
 var storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -25,13 +25,28 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage })
+//--------------------------------------//
 
+//funcionamiento MULTER image Users //
+
+var storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './public/images/users')
+    },
+    filename: function(req, file, cb) {
+        console.log(file);
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+var uploadusers = multer({ storage: storage })
+//-------------------------------------//
 
 
 router.get('/', controlador.index);
 
 router.get('/register', controlador.register);
-router.post('/register', upload.any(), checkRegister, controlador.createUser); //AGREGA USER//
+router.post('/register', uploadusers.any(), checkRegister, controlador.createUser); //AGREGA USER//
 
 router.get('/login', controlador.login);
 router.post('/login', checkLogin, controlador.processLogin); // LOGEA AL CLIENTE/
@@ -67,7 +82,7 @@ router.delete('/delete/:id', controlador.destroy);
 // ruta PROFILE
 
 router.get('/profile/:id', controlador.editprofile);// retorna vista //
-router.put('/profile/:id', upload.any(), controlador.updateprofile); // redirecciona//
+router.put('/profile/:id', uploadusers.any(), controlador.updateprofile); // redirecciona//
 
 
 

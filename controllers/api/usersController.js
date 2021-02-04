@@ -12,10 +12,15 @@ let usersApiController = {
            attributes: ["id", "name", "email"]
             
         }).then(function (users) {
+            users.forEach( function(user){
+                user.setDataValue ("detail", "/api/users/" + user.id)
+            
+                
+            });
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: users.length,
+                    totalUsers: users.length,
                     url: "/api/users"
                 },
                 data: users
@@ -32,7 +37,7 @@ let usersApiController = {
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: users.length,
+                    totalUsers: users.length,
                     url: "/api/users/id"
                 },
                 data: users
