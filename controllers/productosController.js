@@ -6,7 +6,8 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const userData = require('../data/user');
 let db= require("../database/models")
-
+let sequelize = require ("sequelize")
+const Op = sequelize.Op;
 
 const controlador = {
     listadoProductos: (req, res) => {
@@ -194,6 +195,7 @@ id:req.params.id
         })
         .then(function(resultado){
             res.redirect('/productList')
+        //console.log(req.params.id)
         })
         .catch(function(error){
              console.log(error)
@@ -233,7 +235,24 @@ id:req.params.id
             })
         }, 
     
-   
+
+         search (req, res) {
+
+             db.Products.findAll({
+                where: {
+                    name: {
+                        [Op.substring]: req.query.search
+                    }
+                },
+                limit: 12
+            }).then(function(products){
+
+
+                return res.render('results', { products: products.sort(() => Math.random() - 0.5), search: req.query.search })
+            })
+    
+            
+        }
 };
 
 module.exports = controlador;

@@ -23,7 +23,7 @@
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/productList">Productos</a></li>
                 <span class="separatorLines"></span>
-                <li class="headerLi"><a href="profile/<%= user.id %>">¡Hola <%= locals.user.name %>!</a></li>
+                <li class="headerLi"><a href="/profile/<%= user.id %>">¡Hola <%= locals.user.name %>!</a></li>
                 <span class="separatorLines"></span>
                 <li class="headerLi"><a href="/create">Crear un nuevo producto</a></li>
             <% }  %>
@@ -32,7 +32,15 @@
     </nav>
     
     <div>
-        <input type="text" class="searchBar" placeholder="&#xF002;" style="font-family:Arial, FontAwesome" />
+        <form action="/search" method="GET" class="search-form">
+            <% if (typeof search != 'undefined') { %>
+                <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="searchBar" value="<%= search %>" style="font-family:Arial, FontAwesome">
+            <% } else { %>
+                <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="searchBar" style="font-family:Arial, FontAwesome">
+            <% } %>
+          
+        </form>
+        
     </div>
 
 

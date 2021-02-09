@@ -84,7 +84,9 @@ router.delete('/delete/:id', controlador.destroy);
 router.get('/profile/:id', controlador.editprofile);// retorna vista //
 router.put('/profile/:id', uploadusers.any(), controlador.updateprofile); // redirecciona//
 
+// ruta Buscador //
 
+router.get('/search', controlador.search);
 
 
 
