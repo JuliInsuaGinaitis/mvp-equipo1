@@ -5,6 +5,7 @@ const productsList = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const userData = require('../data/user');
+var session = require('express-session');
 let db= require("../database/models")
 
 
@@ -55,7 +56,7 @@ db.Users.create({
             name: req.body.name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            file:  "/images/products/" + req.files[0].filename
+            file:  "/images/users/" + req.files[0].filename
 
         })
         res.render('createUser');
@@ -207,8 +208,7 @@ id:req.params.id
 
    // VISTA Y MODIFICACION DE PERFIL //
     editprofile: (req, res) => {
-       
-        db.Users.findByPk(req.params.id)
+        db.Users.findByPk(req.session.user.id)
         .then(function(user){
             res.render('editProfile', {user})
         })
