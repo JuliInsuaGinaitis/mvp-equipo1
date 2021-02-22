@@ -7,80 +7,6 @@
 
 <%- include('./partials/nav')%>
 
-<<<<<<< HEAD
-<div class='mainProfileC'>
-    <div class='profileLeft'>
-        <p class='profileTitle'>¡Hola <%= locals.user.name %>!</p>
-        <img src="/images/users/<%=user.file %>" height="150px" >
-    </div>
-    <div class='profileRight' id="background-image">
-        <div class="profileDetailContainer">
-            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-data">
-            <div >
-                <label for=""></label>
-                <input class="profileField" type="text" name="name" placeholder="Nombre y Apellido" value="<%=user.name%>">
-            </div>
-
-            <div>
-                <label for=""></label>
-                <input class="profileField" type="email" name="email" placeholder="Email" value="<%=user.email%>">
-            </div>
-
-            <script>
-                // There are many ways to pick a DOM node; here we get the form itself and the email
-// input box, as well as the span element into which we will place the error message.
-const form  = document.getElementsByTagName('form')[0];
-
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
-
-email.addEventListener('input', function (event) {
-  // Each time the user types something, we check if the
-  // form fields are valid.
-
-  if (email.validity.valid) {
-    // In case there is an error message visible, if the field
-    // is valid, we remove the error message.
-    emailError.textContent = ''; // Reset the content of the message
-    emailError.className = 'error'; // Reset the visual state of the message
-  } else {
-    // If there is still an error, show the correct error
-    showError();
-  }
-});
-
-form.addEventListener('submit', function (event) {
-  // if the email field is valid, we let the form submit
-
-  if(!email.validity.valid) {
-    // If it isn't, we display an appropriate error message
-    showError();
-    // Then we prevent the form from being sent by canceling the event
-    event.preventDefault();
-  }
-});
-
-function showError() {
-  if(email.validity.valueMissing) {
-    // If the field is empty
-    // display the following error message.
-    emailError.textContent = 'You need to enter an e-mail address.';
-  } else if(email.validity.typeMismatch) {
-    // If the field doesn't contain an email address
-    // display the following error message.
-    emailError.textContent = 'Entered value needs to be an e-mail address.';
-  } else if(email.validity.tooShort) {
-    // If the data is too short
-    // display the following error message.
-    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
-  }
-
-  // Set the styling appropriately
-  emailError.className = 'error active';
-}
-            </script>
-            <div>
-=======
 <main class="mainCreate-Edit">
   <div class="card-edit">
     <div class="card-left-edit">
@@ -97,22 +23,11 @@ function showError() {
           <div >
             <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-user">
               <div class="form-field">
->>>>>>> f919b66cc7a349029c86c476dbe8243b7d9c41ab
                 <label for=""></label>
                 <input  type="text" name="name" placeholder="Nombre y Apellido" value="<%=user.name%>">
                 </div>
                 <div class="form-field">
                 <label for=""></label>
-<<<<<<< HEAD
-                <input class="profileImageButton" type="file" name="file" placeholder="Avatar" value= "<%= user.file%>" >
-            </div>
-
-            <div>
-                <input class="profileSubmit"type="submit" value="Actualizar tus datos">
-
-            </div>
-        </form>
-=======
                 <input type="email" name="email" placeholder="Email" value="<%=user.email%>">
                 </div>
 
@@ -182,7 +97,6 @@ function showError() {
                   </div>
               </form>
           </div>
->>>>>>> f919b66cc7a349029c86c476dbe8243b7d9c41ab
         </div>
       </div>
     </div>
