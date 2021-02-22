@@ -28,6 +28,10 @@ const controlador = {
         res.render('productCart');
     },
 
+    finalcart: (req, res) => {
+        res.render('finalProductCart');
+    },
+
     detail: (req, res) => {
         
         db.Products.findByPk(req.params.id)

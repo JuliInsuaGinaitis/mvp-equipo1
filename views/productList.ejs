@@ -10,34 +10,34 @@
       <div class="sidebar">
         <div class="sidebarCategory">
           <p class="sidebarCategoryTitle">Instrumentos</p>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Guitarras</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Bajos</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Vientos</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Baterías</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Percusión Varios</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Teclados</label>
+          <label class="sidebarItem"><a href ="/search?search=Guitarra"class="sidebarCheckbox"><i class="far fa-square"></i> Guitarras</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Bajo"class="sidebarCheckbox"><i class="far fa-square"></i> Bajos</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Trompeta"class="sidebarCheckbox"><i class="far fa-square"></i> Vientos</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Bateria"class="sidebarCheckbox"><i class="far fa-square"></i> Baterias</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Percusion"class="sidebarCheckbox"><i class="far fa-square"></i> Percusión</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Teclado"class="sidebarCheckbox"><i class="far fa-square"></i> Teclados</a></label>
         </div>
       <hr>
         <div class="sidebarCategory">
           <p class="sidebarCategoryTitle">Equipo</p>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Pedales</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Bandejas</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Placas de sonido</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Cables</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Accesorios</label>
+          <label class="sidebarItem"><a href ="/search?search=Pedal"class="sidebarCheckbox"><i class="far fa-square"></i> Pedales</a></label>
+          <label class="sidebarItem"><a href ="/search?search=bandeja"class="sidebarCheckbox"><i class="far fa-square"></i> Bandejas</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Placa"class="sidebarCheckbox"><i class="far fa-square"></i> Placas de Sonido</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Cable"class="sidebarCheckbox"><i class="far fa-square"></i> Cables</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Guitarra"class="sidebarCheckbox"><i class="far fa-square"></i>Accesorios</a></label>
         </div>
       <hr>
         <div class="sidebarCategory">
           <p class="sidebarCategoryTitle">Marcas</p>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Fender</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Epiphone</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Squier</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Pearl</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Hartke</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Ibanez</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Yamaha</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">SAMSON</label>
-          <label class="sidebarItem"><Input type="checkbox" class="sidebarCheckbox">Gibson</label>
+          <label class="sidebarItem"><a href ="/search?search=Fender"class="sidebarCheckbox"><i class="far fa-square"></i> Fender</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Epiphone"class="sidebarCheckbox"><i class="far fa-square"></i> Epiphone</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Squier"class="sidebarCheckbox"><i class="far fa-square"></i> Squier</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Pearl"class="sidebarCheckbox"><i class="far fa-square"></i> Pearl</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Hartke"class="sidebarCheckbox"><i class="far fa-square"></i> Hartke</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Ibanez"class="sidebarCheckbox"><i class="far fa-square"></i> Ibanez</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Yamaha"class="sidebarCheckbox"><i class="far fa-square"></i> Yamaha</a></label>
+          <label class="sidebarItem"><a href ="/search?search=SAMSON"class="sidebarCheckbox"><i class="far fa-square"></i> SAMSON</a></label>
+          <label class="sidebarItem"><a href ="/search?search=Gibson"class="sidebarCheckbox"><i class="far fa-square"></i> Gibson</a></label>
         </div>
       </div>
       <div class="pageBody">
@@ -79,27 +79,30 @@
           <%- include('./partials/productCard', {Product: Product[i]})%>
           <%}%>
         </section>
-        <div class="advertsSection">
-          <div class="advertBannerContainer">
-            <img class="advertBanner" src="images/f-productList/yamaha-banner.jpeg">
+        
+          <div class="advertsSection">
+            <div class="advertBannerContainer">
+              <img class="advertBanner" src="images/f-productList/yamaha-banner.jpeg">
+            </div>
+            <div class="advertBannerContainer">
+              <img class="advertBanner" src="images/f-productList/pearl-banner.jpeg">
+            </div>
+            <div class="advertBannerContainer">
+              <img class="advertBanner" src="images/f-productList/pioneer-banner.jpeg">
+            </div>
+            <div class="advertBannerContainer">
+              <img class="advertBanner" src="images/f-productList/gibson-banner.jpeg">
+            </div>
           </div>
-          <div class="advertBannerContainer">
-            <img class="advertBanner" src="images/f-productList/pearl-banner.jpeg">
+          <div class="partnerBrandsContainer">
+            <img class="parnerBrandsImg" src="images/f-productList/partner-brands.jpeg">
           </div>
-          <div class="advertBannerContainer">
-            <img class="advertBanner" src="images/f-productList/pioneer-banner.jpeg">
-          </div>
-          <div class="advertBannerContainer">
-            <img class="advertBanner" src="images/f-productList/gibson-banner.jpeg">
-          </div>
+        <div class="networkBannerContainer">
+          <img class="networkBanner" src="images/f-productList/network-banner.jpeg">
         </div>
-        <div class="partnerBrandsContainer">
-          <img class="parnerBrandsImg" src="images/f-productList/partner-brands.jpeg">
-        </div>
-      <div class="networkBannerContainer">
-        <img class="networkBanner" src="images/f-productList/network-banner.jpeg">
-      </div>
+         
     </div>
   </div>
+  
   <%- include('./partials/footer')%>
 </body>
