@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <%- include('./partials/head')%>
+  
 
   <body>
     <%- include('./partials/header')%>
 
     <!--Contenedor del slideshow-->
-    <div class="slideshow-container">
+    <div class="slideshow-container" data-ride="carousel" data-interval="3000" >
       <!--Imágenes-->
       <div class="mySlides fade">
         <img src="images/f-home/fondo-home-1.jpg" style="width: 100%" />
@@ -116,6 +117,7 @@
         </div>
       </article>
     </section>
+
 
   <%- include('./partials/footer')%>
 
