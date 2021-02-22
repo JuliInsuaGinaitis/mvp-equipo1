@@ -8,18 +8,19 @@
 	<!-- /Header -->
 	<%- include('./partials/nav')%>
 	
-
+<main class="mainWhite">
  
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
+	 <div class="pageBody">
+		
+			<div class="productListSubHeader">
 				<h2 class="products-title">Resultados de la búsqueda: <%= search %></h2>
 			</div>
+			<div class="products">
 			<% if(products.length > 0) { %> 
 				<% products.forEach(product => { %>
 				
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
+				<div>
+					<section >
 						<a href="/productDetail/<%= product.id %> ">
 							<!--<figure class="product-box_image">
 								<img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
@@ -50,7 +51,7 @@
 			<% } %>
 		</div>
 	</div>
-	
+</main>
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->

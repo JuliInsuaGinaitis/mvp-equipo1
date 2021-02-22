@@ -28,6 +28,10 @@ const controlador = {
         res.render('productCart');
     },
 
+    finalcart: (req, res) => {
+        res.render('finalProductCart');
+    },
+
     detail: (req, res) => {
         
         db.Products.findByPk(req.params.id)
@@ -252,7 +256,25 @@ id:req.params.id
             })
     
             
-        }
+        },
+
+        searchCategory (req, res) {
+
+            db.Products.findAll({
+               where: {
+                   main_category_id: {
+                       [Op.substring]: req.query.searchCategory
+                   }
+               },
+               limit: 12
+           }).then(function(products){
+
+
+               return res.render('results', { products: products.sort(() => Math.random() - 0.5), searchCategory: req.query.searchCategory })
+           })
+   
+           
+       }
                 
          
 };

@@ -567,6 +567,13 @@ footer:not(.f-login-register) {
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
   background-size: cover;
 }
+.mainWhite {
+  display: flex;
+  justify-content: center;
+  background-color:white;
+  background-size: cover;
+  min-height: 530px;
+}
 
 #main-login {
   display: flex;
@@ -1013,7 +1020,7 @@ footer:not(.f-login-register) {
 
 .navegador {
   background-color: #16203d;
-  height: 35px;
+  height: 39px;
 }
 
 .links {
@@ -1032,6 +1039,11 @@ footer:not(.f-login-register) {
   flex-grow: 1;
   margin-right: 4%;
   height: 174px;
+}
+
+.noTextDecoration {
+  text-decoration: none;
+  color:white;
 }
 
 .padding-top {
@@ -1230,12 +1242,16 @@ button {
 }
 
 .sidebarItem {
+  text-decoration: none; 
   font-size: 14px;
   padding-bottom: 5px;
+
 }
 
 .sidebarCheckbox {
+  text-decoration: none; 
   margin-right: 3px;
+  color:#000000;
 }
 
 .pagination {
@@ -1321,10 +1337,12 @@ button {
   font-weight: 900;
 }
 
+
 .advertsSection {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
+ 
 }
 
 .advertBannerContainer {
@@ -1486,3 +1504,73 @@ button {
 
 
 
+/* menu */
+
+#menu ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+ }
+ 
+ /* items del menu */
+ 
+ #menu ul li {
+  background-color:#16203d;
+ }
+ 
+ /* enlaces del menu */
+ 
+ #menu ul a {
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  font-weight:400;
+  font-size:15px;
+  padding:10px;
+  letter-spacing:1px;
+ }
+ 
+ /* items del menu */
+ 
+ #menu ul li {
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+ }
+ 
+ /* efecto al pasar el ratón por los items del menu */
+ 
+ #menu ul li:hover {
+  background:#5b78a7;
+ }
+/* menu desplegable */
+
+#menu ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#eee;
+  padding:0;
+ }
+ 
+ /* items del menu desplegable */
+ 
+ #menu ul ul li {
+  float:none;
+  width:150px
+ }
+ 
+ /* enlaces de los items del menu desplegable */
+ 
+ #menu ul ul a {
+  line-height:120%;
+  padding:10px 15px;
+ }
+ 
+ /* items del menu desplegable al pasar el ratón */
+ 
+ #menu ul li:hover > ul {
+  display:block;
+ }

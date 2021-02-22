@@ -8,48 +8,53 @@
 
     <!--Contenedor del slideshow-->
     <div class="slideshow-container" data-ride="carousel" data-interval="3000" >
+   
       <!--Imágenes-->
-      <div class="mySlides fade">
-        <img src="images/f-home/fondo-home-1.jpg" style="width: 100%" />
-        <div class="captionText">INSTRUMENTOS MUSICALES</br>Y AUDIO PROFESIONAL.</div>
-      </div>
+        <div class="mySlides fade">
+          <img src="images/f-home/fondo-home-1.jpg" style="width: 100%" />
+          <div class="captionText">INSTRUMENTOS MUSICALES</br>Y AUDIO PROFESIONAL.</div>
+          </div>
     
-      <div class="mySlides fade">
-        <img src="images/f-home/fondo-home-2.jpg" style="width: 100%" />
-        <div class="captionText">LA MAYOR VARIEDAD DLE MERCADO<br> EN UN SOLO LUGAR</div>
-      </div>
+        <div class="mySlides fade">
+          <img src="images/f-home/fondo-home-2.jpg" style="width: 100%" />
+          <div class="captionText">LA MAYOR VARIEDAD DLE MERCADO<br> EN UN SOLO LUGAR</div>
+          </div>
 
-      <div class="mySlides fade">
-        <img src="images/f-home/fondo-home-3.jpg" style="width: 100%" />
-        <div class="captionText">PRECIOS COMPETITIVOS<br> CON CALIDAD PREMIUM</div>
-      </div>
-      <div class="slideshowItemMainContainer">
-        <div class="slideshowItemContainer">
-          <p class="slideshowItemTitle">COMPRÁ ONLINE</p>
-          <p class="slideshowItemText">INSTRUMENTOS Y ACCESORIOS.</p>
+        <div class="mySlides fade">
+          <img src="images/f-home/fondo-home-3.jpg" style="width: 100%" />
+          <div class="captionText">PRECIOS COMPETITIVOS<br> CON CALIDAD PREMIUM</div>
+          </div>
+        <div class="slideshowItemMainContainer">
+            <div class="slideshowItemContainer">
+              <p class="slideshowItemTitle">COMPRÁ ONLINE</p>
+              <p class="slideshowItemText">INSTRUMENTOS Y ACCESORIOS.</p>
+              </div>
+            <div class="slideshowItemContainer">
+              <p class="slideshowItemTitle">PAGOS</p>
+              <p class="slideshowItemText">TE OFRECEMOS MUCHAS OPCIONES</br>DE PAGO Y CUOTAS.</p>
+              </div>
+            <div class="slideshowItemContainer">
+              <p class="slideshowItemTitle">ENVÍOS A DOMICILIO</p>
+              <p class="slideshowItemText">LLEVAMOS TU PRODUCTO A</br>CUALQUIER LUGAR DEL PAÍS.</p>
+              </div>
         </div>
-        <div class="slideshowItemContainer">
-          <p class="slideshowItemTitle">PAGOS</p>
-          <p class="slideshowItemText">TE OFRECEMOS MUCHAS OPCIONES</br>DE PAGO Y CUOTAS.</p>
-        </div>
-        <div class="slideshowItemContainer">
-          <p class="slideshowItemTitle">ENVÍOS A DOMICILIO</p>
-          <p class="slideshowItemText">LLEVAMOS TU PRODUCTO A</br>CUALQUIER LUGAR DEL PAÍS.</p>
-        </div>
-      </div>
-      
-      <!-- Botones para avanzar-->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div style="text-align: center">
+          
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
     </div>
+  
+
+  
+    
     <br />
 
-    <!-- Los puntitos de por cuál va -->
-    <div style="text-align: center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+  
+  
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
