@@ -56,7 +56,7 @@ db.Users.create({
             name: req.body.name,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            file:  "/images/users/" + req.files[0].filename
+            file: req.files[0].filename
 
         })
         res.render('createUser');
@@ -160,13 +160,14 @@ db.Users.create({
     
     },
     confirmedit: (req, res) => {
-db.Products.update({
+
+        db.Products.update({
     brand:req.body.brand,
     name:req.body.name,
     description:req.body.description,
-    image:req.body.image,
+    image: "/images/products/" + req.files[0].filename,
     price:req.body.price,
-    final_price: req.body.final_price
+    final_price: req.body.finalprice
 },{
 where: {
     id:req.params.id
@@ -216,12 +217,17 @@ id:req.params.id
         })
         
         },
-        updateprofile: (req, res) => {
-            db.Users.update({
+        updateprofile: (req, res, next) => {
+         
+          
+          db.Users.update({
+              
+              
                 
                 name:req.body.name,
                 email:req.body.email,
-                file:req.body.image,
+               file:req.files[0].filename
+                
                 
             },{
             where: {
@@ -252,7 +258,9 @@ id:req.params.id
             })
     
             
-        }
+        },
+
+       
 };
 
 module.exports = controlador;

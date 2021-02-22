@@ -56,6 +56,11 @@ router.get('/contact', controlador.contact);
 
 router.get('/productCart', controlador.cart);
 
+
+
+
+
+
 router.get('/productDetail/:id', controlador.detail); //se hace dinamica//
 
 router.get('/productList', controlador.listadoProductos);

@@ -9,12 +9,12 @@
 
 <div class='mainProfileC'>
     <div class='profileLeft'>
-        <p class='profileTitle'>¡Hola <%= locals.user.name %> !</p>
-        <img src="<%= locals.user.file %>" height="150px" >
+        <p class='profileTitle'>¡Hola <%= locals.user.name %>!</p>
+        <img src="/images/users/<%=user.file %>" height="150px" >
     </div>
     <div class='profileRight' id="background-image">
         <div class="profileDetailContainer">
-            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-user"></form>
+            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-data">
             <div >
                 <label for=""></label>
                 <input class="profileField" type="text" name="name" placeholder="Nombre y Apellido" value="<%=user.name%>">
@@ -84,7 +84,7 @@ function showError() {
             </div>
             <div >
                 <label for=""></label>
-                <input class="profileImageButton" type="file" name="file" placeholder="Avatar" value="<%=user.file%>">
+                <input class="profileImageButton" type="file" name="file" placeholder="Avatar" value= "<%= user.file%>" >
             </div>
 
             <div>
