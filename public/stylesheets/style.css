@@ -309,6 +309,13 @@ header {
 /* Fin de destacados Home*/
 
 /* Categorías Home */
+.form-button-black {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color:black;
+  width: 15%;
+  float:right;
+}
 
 .categorias {
   display: flex;
@@ -514,6 +521,8 @@ footer:not(.f-login-register) {
   margin-top: 20px;
   margin-bottom: 15px;
 }
+
+
 .button-createuser {
   width: 35%;
   height: 30px;
@@ -1174,6 +1183,7 @@ button {
   border-bottom-width: 1px;
   border-bottom-color: lightgray;
   margin-top: 5px;
+  color: black;
 }
 
 .productTitle {

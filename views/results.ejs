@@ -13,11 +13,14 @@
 	 <div class="pageBody">
 		
 			<div class="productListSubHeader">
-				<h2 class="products-title">Resultados de la búsqueda: <%= search %></h2>
+				<h2 class="products-title">Resultados de la búsqueda: <%= search %> <button class="form-button-black" type="submit" ><a class="noTextDecoration" href="/productList">Quitar Filtros</a></button></h2> 
+				
 			</div>
 			<div class="products">
 			<% if(products.length > 0) { %> 
 				<% products.forEach(product => { %>
+
+					
 				
 				<div>
 					<section >
@@ -41,6 +44,7 @@
 					</section>
 				</div>
 				
+				
 				<% }); %>
 			<% } else { %>
 
@@ -50,8 +54,11 @@
 
 			<% } %>
 		</div>
+		
 	</div>
+	
 </main>
+
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
