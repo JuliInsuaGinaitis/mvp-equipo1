@@ -171,12 +171,13 @@ db.Users.create({
     confirmedit: (req, res) => {
 
         db.Products.update({
-    brand:req.body.brand,
+    brand_id:req.body.brand,
     name:req.body.name,
     description:req.body.description,
     image: "/images/products/" + req.files[0].filename,
     price:req.body.price,
-    final_price: req.body.finalprice
+    final_price: req.body.finalprice,
+    main_category_id: req.body.main_category_id
 },{
 where: {
     id:req.params.id
