@@ -1583,6 +1583,9 @@ button {
   align-items: right;
   
 }
+.form-field-edit-desc{
+  padding-bottom: 30px;
+}
 
 .textarea-desc{
   margin-right: 40px;
