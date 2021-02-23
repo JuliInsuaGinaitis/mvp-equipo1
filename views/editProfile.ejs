@@ -17,11 +17,11 @@
         <div class="card-title-login" >
         <h2 >¡Hola <%= locals.user.name %> !</h2></div>
         <div>
-        <img src="/images/users/<%= locals.user.file %>" height="150px" >
+        <img src="/images/users/<%= user.file %>" height="150px" >
         </div>
         <div class='profileRight' id="background-image">
           <div >
-            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-user">
+            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-data">
               <div class="form-field">
                 <label for=""></label>
                 <input  type="text" name="name" placeholder="Nombre y Apellido" value="<%=user.name%>">
