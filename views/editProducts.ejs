@@ -147,59 +147,59 @@
                             <div class="all-inputs">
 
 
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="brand">Marca</label>
                                     <input id="brand" type="text" name="brand" value="<%=product.brand_id%>">
-                                    <i class="fas fa-check-circle"></i>
+                                    <!--<i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="name">Nombre</label>
                                     <input id="name" type="text" name="name" value="<%=product.name%>">
-                                    <i class="fas fa-check-circle"></i>
+                                    <!--<i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
 
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="description">Descripción</label>
-                                    <textarea class="textarea-desc" rows="6" cols="103" name="description" value=>"<%=product.description%>"</textarea>
-                                    <i class="fas fa-check-circle"></i>
+                                    <textarea class="textarea-desc" rows="6"  name="description" value=>"<%=product.description%>"</textarea>
+                                    <!--<i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
-                                <div class="form-field">
-                                    <label for="file">Imagen</label>
+                                <div class="form-field-edit">
+                                    <label for="file"> </label>
                                     <input id="file" type="file" name="image">
-                                    <i class="fas fa-check-circle"></i>
+                                    <!--<i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
-                                <!--<div class="form-field-edit">
-                                    <label for="">Categoria</label>
+                               <div class="form-field-edit">
+                                    <label for="">Imagen</label>
                                     <input type="text" name="mainCategory" value="<%=product.mainCategory%>">
-                                </div>-->
-                                <div class="form-field">
+                                </div>
+                                <div class="form-field-edit">
                                     <label for="mainCategory">Categoría</label>
                                     <input id="mainCategory" type="text" name="mainCategory"value="<%=product.mainCategory%>" >
-                                    <i class="fas fa-check-circle"></i>
+                                    <!--<i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="price">Precio</label>
                                     <input id="price" type="text" name="price" value="<%=product.price%>">
-                                    <i class="fas fa-check-circle"></i>
+                                    <!--<i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
-                                <div class="form-field">
+                                <div class="form-field-edit">
                                     <label for="price">Precio final</label>
                                     <input id="finalprice" type="text" name="finalprice" value="<%=product.final_price%>">
-                                    <i class="fas fa-check-circle"></i>
+                                    <!--<i  class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
+                                    <small>Error message</small> -->
                                 </div>
                                 
                         <div class="check-recover">
@@ -211,7 +211,7 @@
                         </div>
                         
                                 <div class="form-button">
-                                    <input type="submit" class="button-login" value="Actualizar">
+                                   
                                     
 
                                 </div>
@@ -221,10 +221,12 @@
                        
 
                         <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
-                       <div>
+                       <div class="edit-buttons">
                         <form action="/delete/<%=product.id%>?_method=DELETE" method="POST">
                             <input type="submit" class="button-signup" value="Borrar Producto">
+                            <input type="submit" class="button-login" value="Actualizar">
                         </form>  
+                        
                         </div>
                         <!--<div class="card-left-footer">
                             <p>Log in with</p>

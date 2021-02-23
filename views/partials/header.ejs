@@ -49,5 +49,8 @@
         <button class="salir" ><i class="fas fa-sign-out-alt"> </i>Logout</button>
         </form>
     <%} %>
+    <% if (locals.user == undefined ){ %>
     <a href="/productCart"><i class="fas fa-shopping-bag iconHeader"></i></a>
+    <% } else { %>
+        <%} %>
 </header>

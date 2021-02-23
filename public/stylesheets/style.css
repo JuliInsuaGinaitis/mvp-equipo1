@@ -746,7 +746,7 @@ footer:not(.f-login-register) {
 
 .card-right-contact img {
   width: auto;
-  height: 800px;
+  height: 700px;
 }
 
 .card-right-login img {
@@ -1572,6 +1572,21 @@ button {
 .textarea-desc {
   float: right;
   margin-right: 40px;
+  align-items: right;
+  width: 70%;
+}
+.edit-buttons{
+  padding-bottom: 15px;
+}
+.form-field-edit{
+  margin-right: 10px;
+  align-items: right;
+  
+}
+
+.textarea-desc{
+  margin-right: 40px;
+  align-items: right;
 }
 .form-field-contact input {
   padding-left: 2px;
