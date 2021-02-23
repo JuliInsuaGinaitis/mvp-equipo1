@@ -144,7 +144,7 @@ db.Users.create({
             image: "/images/products/" + req.files[0].filename,
             price:req.body.price,
             final_price: req.body.final_price,
-            main_category_id:req.body.main_category_id,
+            main_category_id: req.body.main_category_id
             
         })
         .then(resultado =>{
@@ -228,7 +228,7 @@ id:req.params.id
         },
         updateprofile: (req, res, next) => {
          
-          
+          console.log(req)
           db.Users.update({
               
               

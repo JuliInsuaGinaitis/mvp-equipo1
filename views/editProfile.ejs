@@ -21,7 +21,7 @@
         </div>
         <div class='profileRight' id="background-image">
           <div >
-            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-user">
+            <form method="POST" action="/profile/<%= user.id %>?_method=PUT" class="card-form" enctype="multipart/form-data">
               <div class="form-field">
                 <label for=""></label>
                 <input  type="text" name="name" placeholder="Nombre y Apellido" value="<%=user.name%>">

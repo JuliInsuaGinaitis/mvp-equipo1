@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Mombi7185",
     "database": "jamming_stores",
     "host": "127.0.0.1",
     "dialect": "mysql"
