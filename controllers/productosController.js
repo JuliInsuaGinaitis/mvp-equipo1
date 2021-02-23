@@ -139,7 +139,8 @@ db.Users.create({
             description:req.body.description,
             image: "/images/products/" + req.files[0].filename,
             price:req.body.price,
-            final_price: req.body.final_price
+            final_price: req.body.final_price,
+            main_category_id:req.body.main_category_id,
             
         })
         .then(resultado =>{
