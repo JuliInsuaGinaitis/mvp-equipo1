@@ -1298,6 +1298,21 @@ button {
   border-left-width: 1px;
   border-left-color: lightgray;
 }
+#editButton {
+  position: relative;
+  top: 35px;
+  left: 5px;
+  float:left;
+}
+.productsAdmin {
+  justify-content: center;
+  border-left: solid;
+  border-top: solid;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-left-color:grey;
+  border-top-color:grey;
+}
 
 .productCard {
   width: 400px;
@@ -1306,10 +1321,17 @@ button {
   margin-bottom: 10px;
 }
 
+
 .productImg {
   width: 300px;
   height: 300px;
   padding: 25px;
+}
+.productImgAdmin {
+  width: 100px;
+  height: 100px;
+  padding: 25px;
+  float: left
 }
 
 .productBrand {
