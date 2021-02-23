@@ -52,7 +52,7 @@ router.get('/login', controlador.login);
 router.post('/login', checkLogin, controlador.processLogin); // LOGEA AL CLIENTE/
 
 router.get('/contact', controlador.contact);
-
+router.get('/mensajeEnviado', controlador.mensajeEnviado);
 
 router.get('/productCart', controlador.cart);
 router.get('/finalProductCart' , controlador.finalcart)

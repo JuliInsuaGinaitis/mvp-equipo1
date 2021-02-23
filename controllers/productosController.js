@@ -123,6 +123,10 @@ db.Users.create({
         res.render('contact');
     },
 
+    mensajeEnviado: (req, res) => {
+        res.render('mensajeEnviado');
+    },
+
     // controladores formulario ADMIN //
     createproducts: (req, res) => {
 

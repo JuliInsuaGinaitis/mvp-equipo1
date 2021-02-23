@@ -590,6 +590,12 @@ footer:not(.f-login-register) {
   background-image: url(/images/f-login/fondo\ LOGIN.jpg);
   background-size: cover;
 }
+#main-contact {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  background-size: cover;
+}
 
 #em40 {
   height: 40em;
@@ -603,6 +609,14 @@ footer:not(.f-login-register) {
   margin-top: 2%;
   margin-bottom: 2%;
 }
+.card-contact {
+  width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
 .card-left-login {
   width: 50%;
@@ -610,6 +624,15 @@ footer:not(.f-login-register) {
   padding-left: 4%;
   padding-top: 2%;
   display: grid;
+}
+
+.card-left-contact {
+  width: 65%;
+    background-color: white;
+    padding-left: 4%;
+    padding-top: 2%;
+    display: grid;
+
 }
 
 .card-logo img {
@@ -712,6 +735,18 @@ footer:not(.f-login-register) {
 .card-right-login {
   display: flex;
   width: 50%;
+}
+
+.card-right-contact {
+  display: flex;
+  height: 800px;
+  position: relative;
+  left: 70px;
+}
+
+.card-right-contact img {
+  width: auto;
+  height: 800px;
 }
 
 .card-right-login img {
@@ -1454,6 +1489,11 @@ button {
   float: letf;
   padding: 25px;
 }
+
+.image-contact{
+  width: 30%;
+}
+
 .contacto-temporal {
   width: 80%;
   margin-right: 10%;
@@ -1533,8 +1573,15 @@ button {
   float: right;
   margin-right: 40px;
 }
-
-
+.form-field-contact input {
+  padding-left: 2px;
+  width: 40%;
+  height: 35px;
+  font-size: 12px;
+  border: 1px solid #dedede;
+  margin-bottom: 5px;
+  position: relative;
+}
 
 /* menu */
 
