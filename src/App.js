@@ -10,6 +10,7 @@ import MainButton from './mainButton.js'
 function App () {
   const [products, setProducts] = useState(0)
   const [users, setUsers] = useState(0)
+  const [lastUser, setLastUser] = useState(0)
   const [lastProduct, setLastProduct] = useState(0)
   const [cat, setCat] = useState(0);
 
@@ -35,23 +36,29 @@ function App () {
       console.log(error);})
 
 
-  console.log(users + 'users')
+  console.log(users)
   console.log(products)
   }
   
-      
+  function getLastUser (){
+    for(let i = 0; i < users.length; i++){
+      if (i = users[i].id){
+        setLastUser(users[i])
+      }
+    }
+  }
 
   function getLastProduct (){
     for(let i = 0; i < products.length; i++){
       if (i = products[i].id){
         setLastProduct(products[i])
-        console.log( 'last product' + lastProduct)
       }
     }
   }
 
   function handler(){
     getData();
+    getLastUser();
     getLastProduct();
   }
   
@@ -96,20 +103,20 @@ function App () {
         <div className="second">
         <MainButton title='Último    Usuario'>
           <div className="4box">
-          <p className="mainText">{lastUser}</p>
-          <img src={lastUser} className="graphSample" alt="xd"/>
+          <p className="mainText">{lastUser.name}</p>
+          <img src={lastUser.file} className="graphSample" alt="xd"/>
           <div className="4numberC">
-            <p className="4number1">{lastUser}</p>
+            <p className="4number1">{lastUser.email}</p>
           </div>
           </div>
         </MainButton>
         <MainButton title='Último producto'>
           <div className="5box">
-          <p className="mainText">{lastProduct}</p>
+          <p className="mainText">{lastProduct.name}</p>
           <img src={lastProduct.image} className="graphSample" alt="xd"/>
           <div className="5numberC">
-            <p className="5number1">{lastProduct}</p>
-            <p className="5number2">{lastProduct}</p>
+            <p className="5number1">{lastProduct.main_category}</p>
+            <p className="5number2">{lastProduct.final_price}</p>
           </div>
           </div>
         </MainButton>
