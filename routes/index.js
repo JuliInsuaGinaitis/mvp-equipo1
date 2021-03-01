@@ -52,7 +52,7 @@ router.get('/login', controlador.login);
 router.post('/login', checkLogin, controlador.processLogin); // LOGEA AL CLIENTE/
 
 router.get('/contact', controlador.contact);
-router.get('/mensajeEnviado', controlador.mensajeEnviado);
+router.post('/mensajeEnviado', controlador.mensajeEnviado);
 
 router.get('/productCart', controlador.cart);
 router.get('/finalProductCart' , controlador.finalcart)
@@ -93,6 +93,10 @@ router.put('/profile/:id', uploadusers.any(), controlador.updateprofile); // red
 // ruta Buscador //
 
 router.get('/search', controlador.search);
+
+
+
+
 
 
 

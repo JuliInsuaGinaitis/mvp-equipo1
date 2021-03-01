@@ -211,43 +211,40 @@
                             -->
                         </div>
                         
-                                <div class="form-button">
-                                   
-                                    
-
-                                </div>
-                            </div>
-                        </form>
-
-                       
-
-                        <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
-                       <div class="edit-buttons">
-                        <form action="/delete/<%=product.id%>?_method=DELETE" method="POST">
-                            <input type="submit" class="button-signup" value="Borrar Producto">
+                                
+                        <div class="form-button">
                             <input type="submit" class="button-login" value="Actualizar">
-                        </form>  
-                        
+                            
+
                         </div>
-                        <!--<div class="card-left-footer">
-                            <p>Log in with</p>
-                            <div class="links-network">
-                                <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
-                                <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
-                            </div>
-
-
-                        </div>-->
                     </div>
-                    <!--
-            <div class="card-right-login">
-                <img src="/images/foto REGISTRO.jpg" alt="foto guitarra">
-            </div>
-            -->
-                </div>
+                </form>
 
-            </main>
+                <form action="/delete/<%=product.id%>?_method=DELETE" method="POST">
+                    <input type="submit" class="button-signup" value="Borrar Producto">
+                </form>
+
+                <!--  ******* NUEVO BOTON BORRADO DE PRODUCTO********-->
+               <div>
+                    
+                </div>
+                <!--<div class="card-left-footer">
+                    <p>Log in with</p>
+                    <div class="links-network">
+                        <a href="https://www.google.com.ar"><i class="fab fa-google"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></i></a>
+                        <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></i></a>
+                    </div>
+                </div>-->
+            </div>
+            <!--
+    <div class="card-right-login">
+        <img src="/images/foto REGISTRO.jpg" alt="foto guitarra">
+    </div>
+    -->
+        </div>
+
+    </main>
             <%- include('./partials/footer')%>
                 <!-- <footer class="f-login-register">
                 <div>

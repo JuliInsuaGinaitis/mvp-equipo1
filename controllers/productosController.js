@@ -8,6 +8,7 @@ const userData = require('../data/user');
 let db= require("../database/models")
 let sequelize = require ("sequelize")
 const Op = sequelize.Op;
+const nodemailer = require ("nodemailer")
 
 const controlador = {
     listadoProductos: (req, res) => {
@@ -123,7 +124,48 @@ db.Users.create({
         res.render('contact');
     },
 
-    mensajeEnviado: (req, res) => {
+    mensajeEnviado: (req, res) => {//Habría que crear una cuenta para JAMMING //
+        contentHTML = `
+        <h1> User Information</h1>
+        <ul>
+            <li>Nombre y Apellido:${req.body.nombre}</li>
+            <li>Asunto:${req.body.asunto}</li>
+            <li>Telefono:${req.body.telefono}</li>
+            <li>Email:${req.body.email}</li>
+        </ul>
+        <p>Mensaje:${req.body.mensaje}</p>
+        `;
+
+       let transporter = nodemailer.createTransport({
+            host:"smtp-mail.outlook.com",
+            port:"587",
+            secure: false,
+            auth:{
+                user:"pablomombiela@live.com.ar",
+                pass:"mombi7185"
+            },
+            tls:{
+                rejectUnauthorized: false
+            }
+
+        });
+
+      let info =  transporter.sendMail({
+
+            from: "'Jamming Store'  <pablomombiela@live.com.ar>",
+            to: "pablomombiela@live.com.ar",
+            subject: "Formulario de Contacto",
+            html: contentHTML
+
+
+        }).then (resultado=>{
+console.log(resultado)
+        }).catch (e => {
+            console.log(e)
+        });
+        
+        
+console.log("mensaje enviado", info.messageId);
         res.render('mensajeEnviado');
     },
 

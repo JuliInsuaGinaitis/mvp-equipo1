@@ -27,35 +27,35 @@
                         </div>
 
                         
-                                <form  method="POST" class="card-form" id="form">
+                                <form action="/mensajeEnviado"  method="POST" class="card-form" id="form">
                                     <div class="all-inputs">
 
                                       <div class="form-field-contact">
-                                        <label for="nombre"></label>
-                                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido"  required>
+                                        
+                                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido"  focus>
                                     
-                                            <label for="asunto"></label>
-                                            <input type="text" id="asunto" name="asunto" placeholder="Asunto"  required>
+                                            
+                                        <input type="text" id="asunto" name="asunto" placeholder="Asunto"  >
                                             
                                         </div>
 
                                       <div class="form-field-contact">
-                                        <label for="telefono"></label>
-                                        <input type="number" id="telefono" name="telefono" placeholder="Telefono"  required>
+                                        
+                                        <input type="number" id="telefono" name="telefono" placeholder="Telefono">
                                    
-                                            <label for="email"></label>
-                                            <input type="email" id="email" name="email" placeholder="Email"  required>
+                                            
+                                        <input type="email" id="email" name="email" placeholder="Email">
                                             
                                         </div>
-                                      </div>
+                                     
                                         <div >
-                                            <label for="Contacto"></label>
-                                            <textarea class="textarea" rows="6" cols="75" name="mensaje" value=>Mensaje</textarea>
+                                            
+                                            <textarea class="textarea" rows="6" cols="75" name="mensaje"  placeholder="Mensaje"></textarea>
                                               <div class="form-button">
-                                              <a href="/mensajeEnviado" class="button-signup" >ENVIAR </a>
+                                             <button>Enviar</button>
                                               </div>
                                         </div>
-
+                                    </div>
                                         
 
                                         
